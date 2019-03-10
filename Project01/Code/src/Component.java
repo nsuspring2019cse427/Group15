@@ -19,9 +19,10 @@ public class Component {
 
 	
 	//Draw Method
-	public void draw(Graphics g){
+	public boolean draw(Graphics g){
 		ImageIcon birdImage = new ImageIcon(imagePath);
 		g.drawImage(birdImage.getImage(),x,y,null);
+		return true;
 		
 	}
 	

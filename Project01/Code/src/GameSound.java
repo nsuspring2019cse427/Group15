@@ -4,19 +4,19 @@ import javax.sound.sampled.*;
 public class GameSound {
 
 	//Flap 
-	public static void flapSound(){
+	public static boolean audioFeedback(String filepath){
 		try{	
-			File sound = new File("sounds//flap.wav");
+			File sound = new File(filepath);
 			AudioInputStream ais =AudioSystem.getAudioInputStream(sound);
 			Clip clip = AudioSystem.getClip();
 			clip.open(ais);
 			clip.start();
+			return true;
 		}
-		catch(Exception e){
+		catch(Exception e) {
 			System.out.println("Sound file loading error!");
 		}
-		
-		
+		return false;
 	}
 	
 	
@@ -49,8 +49,6 @@ public class GameSound {
 		catch(Exception e){
 			System.out.println("Sound file loading error!");
 		}
-		
-		
 	}
 
 }
