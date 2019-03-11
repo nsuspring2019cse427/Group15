@@ -23,7 +23,6 @@ public class Component {
 		ImageIcon birdImage = new ImageIcon(imagePath);
 		g.drawImage(birdImage.getImage(),x,y,null);
 		return true;
-		
 	}
 	
 	

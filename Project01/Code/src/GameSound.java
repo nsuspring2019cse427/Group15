@@ -3,11 +3,16 @@ import javax.sound.sampled.*;
 
 public class GameSound {
 
-	//Flap 
-	public static boolean audioFeedback(String filepath){
-		try{	
-			File sound = new File(filepath);
-			AudioInputStream ais =AudioSystem.getAudioInputStream(sound);
+	private File sound;
+
+	public GameSound(String audioFilePath){
+		this.sound = new File(audioFilePath);
+	}
+
+	//Plays the audio file as received as parameters
+	public boolean playAudioFeedback(){
+		try{
+			AudioInputStream ais = AudioSystem.getAudioInputStream(sound);
 			Clip clip = AudioSystem.getClip();
 			clip.open(ais);
 			clip.start();
@@ -17,38 +22,6 @@ public class GameSound {
 			System.out.println("Sound file loading error!");
 		}
 		return false;
-	}
-	
-	
-	//Game Over
-	public static void hitSound(){
-		try{	
-			File sound = new File("sounds//die.wav");
-			AudioInputStream ais =AudioSystem.getAudioInputStream(sound);
-			Clip clip = AudioSystem.getClip();
-			clip.open(ais);
-			clip.start();
-		}
-		catch(Exception e){
-			System.out.println("Sound file loading error!");
-		}
-		
-		
-	}
-	
-	//Point
-	public static void pointSound(){
-		try{	
-			File sound = new File("sounds//point.wav");
-			AudioInputStream ais =AudioSystem.getAudioInputStream(sound);
-			Clip clip = AudioSystem.getClip();
-			clip.open(ais);
-			clip.start();
-		}
-		
-		catch(Exception e){
-			System.out.println("Sound file loading error!");
-		}
 	}
 
 }

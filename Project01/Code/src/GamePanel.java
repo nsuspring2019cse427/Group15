@@ -8,7 +8,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 
 	private static final long serialVersionUID = 1L;
 	
-	public int WIDTH = 706, HEIGHT = 490;
+	public int WIDTH = 700, HEIGHT = 490;
 	private double score = 0; 
 	
 	//background
@@ -19,12 +19,12 @@ public class GamePanel  extends JPanel implements KeyListener {
 	//Wall array
 	private Component[] walls = new Component[8];
 	//Ground
-	private Component ground1 = new Component(0, 445, 750, 490, "images//ground.png");
-	private Component ground2 = new Component(700, 445, 750, 490, "images//ground.png");
+	private Component ground1 = new Component(0, 450, 710, 490, "images//ground.png");
+	private Component ground2 = new Component(700, 450, 710, 490, "images//ground.png");
 	//Wall speed
 	private int speed = 2;
 	//Game Controller
-	private boolean started = false, gameOver = false; 
+	private boolean started = false, gameOver = false;
 	
 	
 	//GamePanel Constructor
@@ -61,18 +61,16 @@ public class GamePanel  extends JPanel implements KeyListener {
 	//Helps wall to shift from left to right 
 	public void scrollWalls(){ 
 		
-		for(int i = 0; i < walls.length; i+=2){
-			if(walls[i].getX() > - 150){
+		for(int i = 0; i < walls.length; i+=2) {
+			if (walls[i].getX() > -150) {
 				walls[i].setX(walls[i].getX() - speed);
-				walls[i+1].setX(walls[i+1].getX() - speed);
-			}
-			else{
+				walls[i + 1].setX(walls[i + 1].getX() - speed);
+			} else {
 				walls[i].setX(700);
-				walls[i+1].setX(700);
-					
+				walls[i + 1].setX(700);
+
 			}
 		}
-		
 		
 		try{ Thread.sleep(5); }  catch(Exception e) {}
 		
@@ -254,7 +252,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 		
 	}
 	
-	//Setters anmd Getters
+	//Setters and Getters
 	public boolean isStarted() {
 		return started;
 	}

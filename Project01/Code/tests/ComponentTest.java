@@ -8,32 +8,34 @@ import org.junit.runners.Parameterized;
 
 import java.awt.*;
 
-import static org.junit.Assert.*;
 
-@RunWith(Parameterized.class)
 public class ComponentTest {
+    private Component ComponentTestObject;
 
     @Before
     public void setUp() throws Exception {
-
+        ComponentTestObject = new Component(0, 0, 700, 490, "images//background.png");
     }
 
     @After
     public void tearDown() throws Exception {
+        ComponentTestObject = null;
     }
 
     @Test
-    public void draw(Graphics g) {
-        Component ground1 = new Component(0, 445, 750, 490, "images//ground.png");
-        assertTrue(ground1.draw(g));
+    public void draw() {
+
     }
 
     @Test
     public void setX() {
+        ComponentTestObject.setX(200);
+        assertEquals(200, ComponentTestObject.getX());
     }
 
     @Test
     public void setY() {
+
     }
 
     @Test
@@ -50,6 +52,7 @@ public class ComponentTest {
 
     @Test
     public void getX() {
+        assertEquals(200, ComponentTestObject.getX());
     }
 
     @Test
