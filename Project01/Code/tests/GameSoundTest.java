@@ -9,6 +9,11 @@ import static org.junit.Assert.*;
 import java.util.Arrays;
 import java.util.Collection;
 
+/**
+ * Tests are based on Junit 4
+ *
+ *
+ */
 
 
 @RunWith(Parameterized.class)
@@ -56,7 +61,7 @@ public class GameSoundTest {
 
         /**
          * Partitioning the input domain into two parts
-         * 
+         *
          * 01 Valid audio input file
          * 02 Invalid audio input file line
          *
