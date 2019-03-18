@@ -58,45 +58,38 @@ class ComponentTest {
         );
     }
 
-
-
-    @Test
-    void setY() {
-        /**
-         * Test case using input space partition for Y position.
-         * The input domain is divided into three parts, 0, negative values and positive values
-         * Only 0 and positive value is accepted, since screen does not have negative positions
-         *
-         */
+    @ParameterizedTest
+    @MethodSource("providePartitionedValueForSetYTest")
+    void setYTest(int input, int expected) {
 
         /**
-         * Test of positive input space partition for Y position
-         * should pass
+         * Setting Y then checking if it was success or not using assert
          */
-        ComponentTestObject.setY(200);
-        assertEquals(200, ComponentTestObject.getY());
-
-
-        /**
-         * Test case of 0 for Y position
-         * should pass
-         */
-        ComponentTestObject.setY(0);
-        assertEquals(0, ComponentTestObject.getY());
-
-        /**
-         * Test case of negative input space partition for Y position
-         * should pass
-         *
-         */
-        ComponentTestObject.setY(-110);
-        assertEquals(-110, ComponentTestObject.getY());
-
-
+        ComponentTestObject.setY(input);
+        assertEquals(expected, ComponentTestObject.getY());
     }
 
+    /**
+     * Test case using input space partition for Y position.
+     * The input domain is divided into three parts, 0, negative values and positive values
+     * all types of int value from negative to positive is supported
+     *
+     */
+
+    private static Stream<Arguments> providePartitionedValueForSetYTest() {
+        return Stream.of(
+                Arguments.of(200, 200),
+                Arguments.of(200, 200),
+                Arguments.of(0, 0),
+                Arguments.of(-110, -110),
+                Arguments.of(-1220, -1220)
+        );
+    }
+
+
+
     @Test
-    void setWidth() {
+    void setWidthTest() {
         /**
          * Test case using input space partition for Component Width.
          * The input domain is divided into three parts, 0, negative values and positive values
@@ -129,7 +122,7 @@ class ComponentTest {
     }
 
     @Test
-    void setHeight() {
+    void setHeightTest() {
         /**
          * Test case using input space partition for Component Height.
          * The input domain is divided into three parts, 0, negative values and positive values
@@ -163,7 +156,7 @@ class ComponentTest {
     }
 
     @Test
-    void setImagePath() {
+    void setImagePathTest() {
 
         /**
          * Test case with valid file path
