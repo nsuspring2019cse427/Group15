@@ -52,7 +52,7 @@ class ComponentTest {
          */
 
         Exception exception = assertThrows(ArithmeticException.class, () -> ComponentTestObject.setX(-100));
-        assertEquals("Can not set negative positions", exception.getMessage());
+        assertEquals("Cannot set negative positions", exception.getMessage());
     }
 
     @Test
@@ -86,7 +86,7 @@ class ComponentTest {
          */
 
         Exception exception = assertThrows(ArithmeticException.class, () -> ComponentTestObject.setY(-100));
-        assertEquals("Can not set negative positions", exception.getMessage());
+        assertEquals("Cannot set negative positions", exception.getMessage());
     }
 
     @Test

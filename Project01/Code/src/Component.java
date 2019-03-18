@@ -45,9 +45,7 @@ public class Component {
 
 
 	//Getters of Component
-	public int getX() {
-		return x;
-	}
+	public int getX() { return x; }
 	public int getY() {
 		return y;
 	}
