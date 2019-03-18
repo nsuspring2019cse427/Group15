@@ -37,7 +37,7 @@ public class Component {
 	
 	public void setWidth(int width) {
 		if (width >= 0)
-			this.height = width;
+			this.width = width;
 		else throw new RuntimeException("Cannot set negative width");
 	}
 	public void setHeight(int height) {

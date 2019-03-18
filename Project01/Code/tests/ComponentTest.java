@@ -51,8 +51,8 @@ class ComponentTest {
          * @Throws RuntimeException
          */
 
-        Exception exception = assertThrows(RuntimeException.class, () -> ComponentTestObject.setX(-100));
-        assertEquals("Cannot set negative positions", exception.getMessage());
+        ComponentTestObject.setX(-111);
+        assertEquals(-111, ComponentTestObject.getX());
     }
 
     @Test
@@ -84,6 +84,8 @@ class ComponentTest {
          * should pass
          *
          */
+        ComponentTestObject.setY(-110);
+        assertEquals(-110, ComponentTestObject.getY());
 
 
     }
@@ -98,7 +100,7 @@ class ComponentTest {
          */
 
         /**
-         * Test of positive input space partition for Y position
+         * Test of positive input space partition for Width
          * should pass
          */
         ComponentTestObject.setWidth(200);
@@ -106,7 +108,7 @@ class ComponentTest {
 
 
         /**
-         * Test case of 0 for Y position
+         * Test case of 0 for Width
          * should pass
          */
         ComponentTestObject.setWidth(0);
@@ -115,6 +117,7 @@ class ComponentTest {
         /**
          * Test case of negative input space partition for Y position
          * should pass
+         * @Throws RuntimeException as the value is not acceptable.
          */
         Exception exception = assertThrows(RuntimeException.class, () -> ComponentTestObject.setWidth(-100));
         assertEquals("Cannot set negative width", exception.getMessage());
