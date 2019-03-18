@@ -20,7 +20,7 @@ import java.util.Collection;
 public class GameSoundTest {
 
     /**
-     * INITIALIZATION
+     * INITIALIZATION OF VARIABLES
      *
      **/
     private GameSound testObject;

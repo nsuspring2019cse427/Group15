@@ -176,24 +176,59 @@ class ComponentTest {
     }
 
     @Test
-    void getX() {
-        //TODO partition in three parts, valid, and null,
+    void getXTest() {
+
+        /**
+         * Test case to check if getX returns right value of X
+         *
+         */
+        ComponentTestObject.setX(100);
+        assertEquals(100, ComponentTestObject.getX());
     }
 
     @Test
-    void getY() {
+    void getYTest() {
+
+        /**
+         * Test case to check if getY returns right value of Y
+         *
+         */
+        ComponentTestObject.setY(200);
+        assertEquals(200, ComponentTestObject.getY());
     }
 
     @Test
-    void getWidth() {
+    void getWidthTest() {
+
+        /**
+         * Test case to check if getWidth returns right value of Width
+         * should pass
+         */
+        ComponentTestObject.setWidth(200);
+        assertEquals(200, ComponentTestObject.getWidth());
     }
 
     @Test
-    void getHeight() {
+    void getHeightTest() {
+
+        /**
+         * Test case to check if getHeight returns right value of Height
+         *
+         */
+        ComponentTestObject.setHeight(200);
+        assertEquals(200, ComponentTestObject.getHeight());
     }
 
     @Test
-    void getImagePath() {
+    void getImagePathTest() {
+
+        /**
+         * Test case with valid file path to check if the getImagePath returns right path
+         * should pass with no exception
+         *
+         */
+        ComponentTestObject.setImagePath("images//wallUp.png");
+        assertEquals("images//wallUp.png", ComponentTestObject.getImagePath());
     }
 }
 

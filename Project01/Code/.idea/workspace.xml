@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964abf8d-9a0b-4889-9b94-a1446bd8de29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/BirdFlapTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/GamePanelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Code.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Code/ComponentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Code/ComponentTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Code/GameSoundTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Code/GameSoundTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BirdFlap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BirdFlap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/ComponentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ComponentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/GameSoundTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/GameSoundTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,13 +15,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="3065">
+              <caret line="231" column="5" lean-forward="true" selection-start-line="231" selection-start-column="5" selection-end-line="231" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#532#533#0" expanded="true" />
+                <element signature="e#625#626#0" expanded="true" />
+                <element signature="e#663#664#0" expanded="true" />
+                <element signature="e#705#706#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Component.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="420">
+              <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1353#1354#0" expanded="true" />
@@ -46,6 +44,27 @@
                 <element signature="e#1418#1419#0" expanded="true" />
                 <element signature="e#1450#1451#0" expanded="true" />
                 <element signature="e#1473#1474#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/GamePanelTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="57" column="22" lean-forward="true" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/GameSoundTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-415">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,11 +100,11 @@
         <option value="$PROJECT_DIR$/src/GameSound.java" />
         <option value="$PROJECT_DIR$/src/GamePanel.java" />
         <option value="$PROJECT_DIR$/src/Component.java" />
-        <option value="$PROJECT_DIR$/tests/GameSoundTest.java" />
         <option value="$PROJECT_DIR$/src/BirdFlap.java" />
         <option value="$PROJECT_DIR$/tests/BirdFlapTest.java" />
         <option value="$PROJECT_DIR$/tests/GamePanelTest.java" />
         <option value="$PROJECT_DIR$/tests/ComponentTest.java" />
+        <option value="$PROJECT_DIR$/tests/GameSoundTest.java" />
       </list>
     </option>
   </component>
@@ -107,17 +126,6 @@
             <path>
               <item name="Code" type="b2602c69:ProjectViewProjectNode" />
               <item name="Code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Code" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Code" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-              <item name="libraries" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Code" type="b2602c69:ProjectViewProjectNode" />
@@ -152,7 +160,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552938077495" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552939700450" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -238,18 +246,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ComponentTest - 2019.03.18 at 23h 00m 12s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentTest - 2019.03.18 at 23h 01m 08s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentTest - 2019.03.18 at 23h 02m 05s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentTest - 2019.03.18 at 23h 03m 41s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GameSoundTest - 2019.03.18 at 23h 38m 34s.xml">
       <configuration name="GameSoundTest" configurationId="JUnit" />
     </history-entry>
@@ -268,15 +264,27 @@
     <history-entry file="ComponentTest - 2019.03.19 at 01h 36m 17s.xml">
       <configuration name="ComponentTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ComponentTest - 2019.03.19 at 02h 00m 02s.xml">
+      <configuration name="ComponentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComponentTest - 2019.03.19 at 02h 02m 44s.xml">
+      <configuration name="ComponentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComponentTest - 2019.03.19 at 02h 05m 56s.xml">
+      <configuration name="ComponentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComponentTest - 2019.03.19 at 02h 07m 17s.xml">
+      <configuration name="ComponentTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14116000" />
+    <option name="totallyTimeSpent" value="14616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1400" height="837" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27540502" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27540502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -285,7 +293,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -390,23 +398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/GamePanelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="57" column="22" lean-forward="true" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/GameSoundTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameSound.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -428,8 +419,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Component.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="420">
+          <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1353#1354#0" expanded="true" />
@@ -444,8 +435,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="3065">
+          <caret line="231" column="5" lean-forward="true" selection-start-line="231" selection-start-column="5" selection-end-line="231" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/GamePanelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="57" column="22" lean-forward="true" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/GameSoundTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-415">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
