@@ -22,8 +22,6 @@ public class BirdFlap extends Thread {
 			panel.repaint();
 		}	
 	}
-	
-	
-	
+
 
 }

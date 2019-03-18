@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.*;
+import org.junit.jupiter.params.provider.MethodSource;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
@@ -23,6 +25,24 @@ class ComponentTest {
     void tearDown() {
         ComponentTestObject = null;
     }
+
+
+    @ParameterizedTest
+    @MethodSource("provideStringsForIsBlank")
+    void isBlank_ShouldReturnTrueForNullOrBlankStrings(String input, boolean expected) {
+        assertEquals(expected, Strings.isBlank(input));
+    }
+
+    private static Stream<Arguments> provideStringsForIsBlank() {
+        return Stream.of(
+                Arguments.of(null, true),
+                Arguments.of("", true),
+                Arguments.of("  ", true),
+                Arguments.of("not blank", false)
+        );
+    }
+
+
 
     @Test
     void setX() {

@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964abf8d-9a0b-4889-9b94-a1446bd8de29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/BirdFlapTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/GamePanelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Code.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Code/ComponentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Code/ComponentTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Code/GameSoundTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Code/GameSoundTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BirdFlap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BirdFlap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/ComponentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ComponentTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -14,83 +21,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Component.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1372#1373#0" expanded="true" />
-                <element signature="e#1418#1419#0" expanded="true" />
-                <element signature="e#1473#1474#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BirdFlap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="64" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameSound.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="8" column="43" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/GameSoundTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="15" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="377">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#361#362#0" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
-                <element signature="e#492#493#0" expanded="true" />
-                <element signature="e#534#535#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Component.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5">
+              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1353#1354#0" expanded="true" />
+                <element signature="e#1372#1373#0" expanded="true" />
+                <element signature="e#1398#1399#0" expanded="true" />
+                <element signature="e#1418#1419#0" expanded="true" />
+                <element signature="e#1450#1451#0" expanded="true" />
+                <element signature="e#1473#1474#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,13 +82,15 @@
         <option value="$PROJECT_DIR$/src/GamePanel.java" />
         <option value="$PROJECT_DIR$/src/Component.java" />
         <option value="$PROJECT_DIR$/tests/GameSoundTest.java" />
+        <option value="$PROJECT_DIR$/src/BirdFlap.java" />
+        <option value="$PROJECT_DIR$/tests/BirdFlapTest.java" />
+        <option value="$PROJECT_DIR$/tests/GamePanelTest.java" />
         <option value="$PROJECT_DIR$/tests/ComponentTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
-    <option name="y" value="43" />
+    <option name="y" value="23" />
     <option name="width" value="1400" />
     <option name="height" value="837" />
   </component>
@@ -144,13 +101,23 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Code" type="b2602c69:ProjectViewProjectNode" />
               <item name="Code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Code" type="b2602c69:ProjectViewProjectNode" />
@@ -162,10 +129,20 @@
               <item name="Code" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="org.junit.jupiter:junit-jupiter-params:5.0.0" type="70bed36:NamedLibraryElementNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,14 +152,14 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552934641025" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552938077495" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -205,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GameSoundTest">
+  <component name="RunManager" selected="JUnit.ComponentTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Code" />
@@ -233,8 +210,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameSoundTest" />
         <item itemvalue="JUnit.ComponentTest" />
+        <item itemvalue="JUnit.GameSoundTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -255,14 +232,12 @@
       <workItem from="1552911168699" duration="1061000" />
       <workItem from="1552913546524" duration="746000" />
       <workItem from="1552914906612" duration="61000" />
-      <workItem from="1552916486554" duration="4730000" />
+      <workItem from="1552916486554" duration="5820000" />
+      <workItem from="1552936647116" duration="1301000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ComponentTest - 2019.03.18 at 22h 59m 29s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ComponentTest - 2019.03.18 at 23h 00m 12s.xml">
       <configuration name="ComponentTest" configurationId="JUnit" />
     </history-entry>
@@ -290,15 +265,18 @@
     <history-entry file="GameSoundTest - 2019.03.18 at 23h 43m 03s.xml">
       <configuration name="GameSoundTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ComponentTest - 2019.03.19 at 01h 36m 17s.xml">
+      <configuration name="ComponentTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11725000" />
+    <option name="totallyTimeSpent" value="14116000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="43" width="1400" height="837" extended-state="0" />
+    <frame x="0" y="23" width="1400" height="837" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27172312" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27540502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -307,7 +285,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -379,29 +357,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BirdFlap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/BirdFlapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="315">
           <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BirdFlap.java">
+    <entry file="file://$PROJECT_DIR$/tests/GamePanelTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        <state relative-caret-position="445">
+          <caret line="57" column="22" lean-forward="true" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component.java">
+    <entry file="file://$PROJECT_DIR$/tests/GameSoundTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="165">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1372#1373#0" expanded="true" />
-            <element signature="e#1418#1419#0" expanded="true" />
-            <element signature="e#1473#1474#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -418,31 +419,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="64" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/GameSoundTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="15" selection-end-column="3" />
+        <state>
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Component.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="-5">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#1353#1354#0" expanded="true" />
+            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1398#1399#0" expanded="true" />
+            <element signature="e#1418#1419#0" expanded="true" />
+            <element signature="e#1450#1451#0" expanded="true" />
+            <element signature="e#1473#1474#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -524,7 +529,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>lib</last-edited>
+          <last-edited>org.junit.jupiter:junit-jupiter-params:5.0.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
