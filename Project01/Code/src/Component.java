@@ -26,24 +26,24 @@ public class Component {
 	}
 	
 	
-	//Setters of Birds Component
+	//Setters of Component
 	public void setX(int x) {
-		if (x >= 0)
-			this.x = x;
-		else throw new RuntimeException("Cannot set negative positions");
+		this.x = x;
 	}
 	
 	public void setY(int y) {
-		if (y >= 0)
-			this.y = y;
-		else throw new RuntimeException("Cannot set negative positions");
+		this.y = y;
 	}
 	
 	public void setWidth(int width) {
-		this.width = width;
+		if (width >= 0)
+			this.height = width;
+		else throw new RuntimeException("Cannot set negative width");
 	}
 	public void setHeight(int height) {
-		this.height = height;
+		if (height >= 0)
+			this.height = height;
+		else throw new RuntimeException("Cannot set negative height");
 	}
 	public void setImagePath(String imagePath) {
 		this.imagePath = imagePath;
