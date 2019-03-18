@@ -21,33 +21,33 @@ class ComponentTest {
     }
 
     @Test
-    void draw() {
-    }
-
-    @Test
     void setX() {
+
         /**
-         * Test case using input space partition.
+         * Test case using input space partition for X position.
          * The input domain is divided into three parts, 0, negative values and positive values
          * Only 0 and positive value is accepted, since screen does not have negative positions
          *
          */
 
         /**
-         * Test for positive input space
+         * Test of positive input space partition for X position
+         * should pass
          */
         ComponentTestObject.setX(200);
         assertEquals(200, ComponentTestObject.getX());
 
 
         /**
-         * Test case for 0
+         * Test case of 0 for X position
+         * should pass
          */
         ComponentTestObject.setX(0);
         assertEquals(0, ComponentTestObject.getX());
 
         /**
-         * Test case for negative numbers
+         * Test case of negative input space partition for X position
+         * should pass
          * @Throws RuntimeException
          */
 
@@ -57,6 +57,36 @@ class ComponentTest {
 
     @Test
     void setY() {
+        /**
+         * Test case using input space partition for Y position.
+         * The input domain is divided into three parts, 0, negative values and positive values
+         * Only 0 and positive value is accepted, since screen does not have negative positions
+         *
+         */
+
+        /**
+         * Test of positive input space partition for Y position
+         * should pass
+         */
+        ComponentTestObject.setY(200);
+        assertEquals(200, ComponentTestObject.getY());
+
+
+        /**
+         * Test case of 0 for Y position
+         * should pass
+         */
+        ComponentTestObject.setY(0);
+        assertEquals(0, ComponentTestObject.getY());
+
+        /**
+         * Test case of negative input space partition for Y position
+         * should pass
+         * @Throws RuntimeException
+         */
+
+        Exception exception = assertThrows(ArithmeticException.class, () -> ComponentTestObject.setY(-100));
+        assertEquals("Can not set negative positions", exception.getMessage());
     }
 
     @Test
