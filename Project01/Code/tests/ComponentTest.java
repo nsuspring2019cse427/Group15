@@ -2,7 +2,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.*;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
@@ -28,56 +31,34 @@ class ComponentTest {
 
 
     @ParameterizedTest
-    @MethodSource("provideStringsForIsBlank")
-    void isBlank_ShouldReturnTrueForNullOrBlankStrings(String input, boolean expected) {
-        assertEquals(expected, Strings.isBlank(input));
+    @MethodSource("providePartitionedValueForSetXTest")
+    void setXTest(int input, int expected) {
+
+        /**
+         * Setting x then checking if it was success or not using assert
+         */
+        ComponentTestObject.setX(input);
+        assertEquals(expected, ComponentTestObject.getX());
     }
 
-    private static Stream<Arguments> provideStringsForIsBlank() {
+    /**
+     * Test case using input space partition for X position.
+     * The input domain is divided into three parts, 0, negative values and positive values
+     * all types of int value from negative to positive is supported
+     *
+     */
+
+    private static Stream<Arguments> providePartitionedValueForSetXTest() {
         return Stream.of(
-                Arguments.of(null, true),
-                Arguments.of("", true),
-                Arguments.of("  ", true),
-                Arguments.of("not blank", false)
+                Arguments.of(200, 200),
+                Arguments.of(200, 200),
+                Arguments.of(0, 0),
+                Arguments.of(-110, -110),
+                Arguments.of(-1220, -1220)
         );
     }
 
 
-
-    @Test
-    void setX() {
-
-        /**
-         * Test case using input space partition for X position.
-         * The input domain is divided into three parts, 0, negative values and positive values
-         * Only 0 and positive value is accepted, since screen does not have negative positions
-         *
-         */
-
-        /**
-         * Test of positive input space partition for X position
-         * should pass
-         */
-        ComponentTestObject.setX(200);
-        assertEquals(200, ComponentTestObject.getX());
-
-
-        /**
-         * Test case of 0 for X position
-         * should pass
-         */
-        ComponentTestObject.setX(0);
-        assertEquals(0, ComponentTestObject.getX());
-
-        /**
-         * Test case of negative input space partition for X position
-         * should pass
-         * @Throws RuntimeException
-         */
-
-        ComponentTestObject.setX(-111);
-        assertEquals(-111, ComponentTestObject.getX());
-    }
 
     @Test
     void setY() {
