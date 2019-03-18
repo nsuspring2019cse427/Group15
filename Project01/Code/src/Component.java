@@ -1,6 +1,7 @@
 import javax.swing.*;
 
 import java.awt.*;
+import java.io.File;
 
 public class Component {
 	
@@ -9,12 +10,12 @@ public class Component {
 	private int width, height; 
 	private String imagePath;
 	
-	public Component(int x, int y,int width, int height, String imagePath){
-		this.x = x;
-		this.y = y;
-		this.width = width;
-		this.height = height;
-		this.imagePath = imagePath;
+	public Component(int x, int y, int width, int height, String imagePath){
+		this.setX(x);
+		this.setY(y);
+		this.setHeight(height);
+		this.setWidth(width);
+		this.setImagePath(imagePath);
 	}
 
 	
@@ -45,8 +46,13 @@ public class Component {
 			this.height = height;
 		else throw new RuntimeException("Cannot set negative height");
 	}
+
 	public void setImagePath(String imagePath) {
-		this.imagePath = imagePath;
+		// Check to see if a file exists, set link if exists.
+		File file = new File(imagePath);
+		if (file.exists() && file.isFile()) {
+			this.imagePath = imagePath;
+		} else throw new RuntimeException("Invalid file");
 	}
 
 

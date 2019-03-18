@@ -18,7 +18,6 @@ public class GamePanel  extends JPanel implements KeyListener {
 	private GameSound flapSound = new GameSound("sounds//flap.wav");
 
 
-
 	public int WIDTH = 700, HEIGHT = 490;
 	private double score = 0; 
 	
