@@ -40,13 +40,13 @@ public class GameSoundTest {
     @Test
     public void audioFeedbackTest() {
         /**
-         * Assert for valid input audio file
+         * Test for valid input audio file
          *
          **/
         assertTrue(testObject.playAudioFeedback());
 
         /**
-         * Assert for Invalid input audio file
+         * Test for Invalid input audio file
          *
          **/
         assertFalse(testObjectWithWrongAudioFile.playAudioFeedback());
