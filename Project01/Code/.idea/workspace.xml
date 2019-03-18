@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="964abf8d-9a0b-4889-9b94-a1446bd8de29" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/ComponentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ComponentTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -15,26 +14,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Component.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
+            <state relative-caret-position="120">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1351#1352#0" expanded="true" />
-                <element signature="e#1397#1398#0" expanded="true" />
-                <element signature="e#1452#1453#0" expanded="true" />
+                <element signature="e#1372#1373#0" expanded="true" />
+                <element signature="e#1418#1419#0" expanded="true" />
+                <element signature="e#1473#1474#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2370">
-              <caret line="158" column="25" lean-forward="true" selection-start-line="158" selection-start-column="25" selection-end-line="158" selection-end-column="25" />
+            <state relative-caret-position="128">
+              <caret line="162" column="40" selection-start-line="162" selection-start-column="40" selection-end-line="162" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#361#362#0" expanded="true" />
@@ -127,8 +126,8 @@
         <option value="$PROJECT_DIR$/src/GameSound.java" />
         <option value="$PROJECT_DIR$/tests/GameSoundTest.java" />
         <option value="$PROJECT_DIR$/src/GamePanel.java" />
-        <option value="$PROJECT_DIR$/tests/ComponentTest.java" />
         <option value="$PROJECT_DIR$/src/Component.java" />
+        <option value="$PROJECT_DIR$/tests/ComponentTest.java" />
       </list>
     </option>
   </component>
@@ -176,7 +175,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552928215641" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552928655161" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -206,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ComponentTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Code" />
@@ -234,8 +233,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ComponentTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.GameSoundTest" />
       </list>
     </recent_temporary>
@@ -256,29 +255,11 @@
       <workItem from="1552911168699" duration="1061000" />
       <workItem from="1552913546524" duration="746000" />
       <workItem from="1552914906612" duration="61000" />
-      <workItem from="1552916486554" duration="2001000" />
+      <workItem from="1552916486554" duration="2439000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ComponentTest - 2019.03.11 at 20h 45m 00s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentTest - 2019.03.18 at 19h 41m 36s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentTest - 2019.03.18 at 19h 42m 42s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentTest - 2019.03.18 at 19h 42m 57s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentTest - 2019.03.18 at 19h 43m 41s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentTest - 2019.03.18 at 19h 48m 01s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ComponentTest - 2019.03.18 at 19h 48m 57s.xml">
       <configuration name="ComponentTest" configurationId="JUnit" />
     </history-entry>
@@ -291,9 +272,27 @@
     <history-entry file="ComponentTest - 2019.03.18 at 22h 37m 37s.xml">
       <configuration name="ComponentTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ComponentTest - 2019.03.18 at 22h 59m 11s.xml">
+      <configuration name="ComponentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComponentTest - 2019.03.18 at 22h 59m 29s.xml">
+      <configuration name="ComponentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComponentTest - 2019.03.18 at 23h 00m 12s.xml">
+      <configuration name="ComponentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComponentTest - 2019.03.18 at 23h 01m 08s.xml">
+      <configuration name="ComponentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComponentTest - 2019.03.18 at 23h 02m 05s.xml">
+      <configuration name="ComponentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComponentTest - 2019.03.18 at 23h 03m 41s.xml">
+      <configuration name="ComponentTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8996000" />
+    <option name="totallyTimeSpent" value="9434000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="837" extended-state="0" />
@@ -380,13 +379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/GameSoundTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -397,26 +389,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameSound.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="8" column="43" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2370">
-          <caret line="158" column="25" lean-forward="true" selection-start-line="158" selection-start-column="25" selection-end-line="158" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#534#535#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -437,13 +422,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Component.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
+        <state relative-caret-position="120">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1351#1352#0" expanded="true" />
-            <element signature="e#1397#1398#0" expanded="true" />
-            <element signature="e#1452#1453#0" expanded="true" />
+            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1418#1419#0" expanded="true" />
+            <element signature="e#1473#1474#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="162" column="40" selection-start-line="162" selection-start-column="40" selection-end-line="162" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
           </folding>
         </state>
       </provider>

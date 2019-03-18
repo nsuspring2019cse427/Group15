@@ -50,7 +50,7 @@ public class Component {
 	public void setImagePath(String imagePath) {
 		// Check to see if a file exists, set link if exists.
 		File file = new File(imagePath);
-		if (file.exists() && file.isFile()) {
+		if (file.exists() && file.isFile() && imagePath != null) {
 			this.imagePath = imagePath;
 		} else throw new RuntimeException("Invalid file");
 	}

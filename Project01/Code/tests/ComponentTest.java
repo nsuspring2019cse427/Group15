@@ -157,8 +157,22 @@ class ComponentTest {
 
     @Test
     void setImagePath() {
+
+        /**
+         * Test case with valid file path
+         * should pass with no exception
+         *
+         */
         ComponentTestObject.setImagePath("images//background.png");
-        assertEquals("images//background.png", ComponentTestObject.getHeight());
+        assertEquals("images//background.png", ComponentTestObject.getImagePath());
+
+        /**
+         * Test case with invalid file path
+         * should pass with exception
+         * @Throws RuntimeException as the path is not valid.
+         */
+        Exception exception = assertThrows(RuntimeException.class, () -> ComponentTestObject.setImagePath("invalidFilePath"));
+        assertEquals("Invalid file", exception.getMessage());
     }
 
     @Test
