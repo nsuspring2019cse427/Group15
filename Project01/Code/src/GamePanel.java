@@ -7,7 +7,18 @@ import java.awt.event.*;
 public class GamePanel  extends JPanel implements KeyListener {
 
 	private static final long serialVersionUID = 1L;
-	
+
+	/**
+	 * Game sounds initialization, fixes after testing the GameSound Class
+	 *
+	 */
+
+	private GameSound dieSound = new GameSound("sounds//die.wav");
+	private GameSound pointSound = new GameSound("sounds//point.wav");
+	private GameSound flapSound = new GameSound("sounds//flap.wav");
+
+
+
 	public int WIDTH = 700, HEIGHT = 490;
 	private double score = 0; 
 	
@@ -49,7 +60,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 		// checks if it touches the ground or Sky
 		if(bird.getY() > 450 || bird.getY() <= 0){ 
 			// Plays hit Sound and if bird touches anything then makes gameOver true.
-			if(!gameOver) GameSound.audioFeedback("sounds//die.wav");
+			if(!gameOver) dieSound.playAudioFeedback();
 			gameOver = true;
 			bird.setX(-500);
 		}
@@ -169,7 +180,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 			Rectangle WallRect=new Rectangle(walls[i].getX(),walls[i].getY(),walls[i].getWidth(),walls[i].getHeight());
 			if(WallRect.intersects(birdBound)==true){
 				bird.setX(-500);
-				if(!gameOver) GameSound.audioFeedback("sounds//die.wav");
+				if(!gameOver) dieSound.playAudioFeedback();
 				gameOver = true;
 				break;
 			} else if(bird.getX() == walls[i].getX()+1){
@@ -201,7 +212,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 			//Flaps if key pressed
 			BirdFlap flap = new BirdFlap(this,bird);
 			flap.start();
-			GameSound.audioFeedback("sounds//flap.wav");
+			flapSound.playAudioFeedback();
 		}
 	
 	}
@@ -210,7 +221,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 	//Increments the score
 	public void score(){
 		score+= 0.5;
-		GameSound.audioFeedback("sounds//point.wav");
+		pointSound.playAudioFeedback();
 	}
 	
 	public void createWalls(){
