@@ -115,8 +115,8 @@ class ComponentTest {
         assertEquals(0, ComponentTestObject.getWidth());
 
         /**
-         * Test case of negative input space partition for Y position
-         * should pass
+         * Test case of negative input space partition for Width
+         * should pass with exception
          * @Throws RuntimeException as the value is not acceptable.
          */
         Exception exception = assertThrows(RuntimeException.class, () -> ComponentTestObject.setWidth(-100));
@@ -125,6 +125,35 @@ class ComponentTest {
 
     @Test
     void setHeight() {
+        /**
+         * Test case using input space partition for Component Height.
+         * The input domain is divided into three parts, 0, negative values and positive values
+         * Only 0 and positive value is accepted, since Heights cannot be negative.
+         *
+         */
+
+        /**
+         * Test of positive input space partition for height
+         * should pass
+         */
+        ComponentTestObject.setHeight(200);
+        assertEquals(200, ComponentTestObject.getHeight());
+
+
+        /**
+         * Test case of 0 for Height
+         * should pass
+         */
+        ComponentTestObject.setHeight(0);
+        assertEquals(0, ComponentTestObject.getHeight());
+
+        /**
+         * Test case of negative input space partition for height
+         * should pass with exception
+         * @Throws RuntimeException as the value is not acceptable.
+         */
+        Exception exception = assertThrows(RuntimeException.class, () -> ComponentTestObject.setHeight(-100));
+        assertEquals("Cannot set negative height", exception.getMessage());
 
     }
 
