@@ -1,73 +1,94 @@
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import java.awt.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-
-public class ComponentTest {
+class ComponentTest {
     private Component ComponentTestObject;
 
-    @Before
-    public void setUp() throws Exception {
+    @BeforeEach
+    void setUp() {
         ComponentTestObject = new Component(0, 0, 700, 490, "images//background.png");
     }
 
-    @After
-    public void tearDown() throws Exception {
+    @AfterEach
+    void tearDown() {
         ComponentTestObject = null;
     }
 
     @Test
-    public void draw() {
-
+    void draw() {
     }
 
     @Test
-    public void setX() {
+    void setX() {
+        /**
+         * Test case using input space partition.
+         * The input domain is divided into three parts, 0, negative values and positive values
+         * Only 0 and positive value is accepted, since screen does not have negative positions
+         *
+         */
+
+        /**
+         * Test for positive input space
+         */
         ComponentTestObject.setX(200);
         assertEquals(200, ComponentTestObject.getX());
+
+
+        /**
+         * Test case for 0
+         */
+        ComponentTestObject.setX(0);
+        assertEquals(0, ComponentTestObject.getX());
+
+        /**
+         * Test case for negative numbers
+         * @Throws RuntimeException
+         */
+
+        Exception exception = assertThrows(ArithmeticException.class, () -> ComponentTestObject.setX(-100));
+        assertEquals("Can not set negative positions", exception.getMessage());
     }
 
     @Test
-    public void setY() {
-
+    void setY() {
     }
 
     @Test
-    public void setWidth() {
+    void setWidth() {
     }
 
     @Test
-    public void setHeight() {
+    void setHeight() {
     }
 
     @Test
-    public void setImagePath() {
+    void setImagePath() {
     }
 
     @Test
-    public void getX() {
-        assertEquals(200, ComponentTestObject.getX());
+    void getX() {
     }
 
     @Test
-    public void getY() {
+    void getY() {
     }
 
     @Test
-    public void getWidth() {
+    void getWidth() {
     }
 
     @Test
-    public void getHeight() {
+    void getHeight() {
     }
 
     @Test
-    public void getImagePath() {
+    void getImagePath() {
     }
 }
+
