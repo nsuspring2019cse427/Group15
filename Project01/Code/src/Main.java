@@ -5,7 +5,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		GamePanel panel  = new GamePanel(); 
+		GamePanel panel  = new GamePanel();
 		
 		JFrame  frame = new JFrame();
 		frame.setResizable(false);
@@ -25,7 +25,7 @@ public class Main {
 		
 		//Starts the game
 		while(panel.isStarted()){
-			panel.Gravity();
+			panel.gravityPull();
 			panel.scrollWalls();
 			panel.checkCollision();
 			panel.scrollBG();

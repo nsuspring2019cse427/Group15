@@ -50,7 +50,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 	
 	
 	//Gives bird Some Gravity
-	public void Gravity(){	
+	public void gravityPull(){
 		
 		bird.setY(bird.getY() + 3);						//Starts falling by One Pixel
 		
