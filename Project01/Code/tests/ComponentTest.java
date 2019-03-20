@@ -29,13 +29,17 @@ class ComponentTest {
         ComponentTestObject = null;
     }
 
-
+    /**
+     * Test case using input space partition for X position.
+     * The values are fed dynamically one by one from the providePartitionedValueForSetXTest
+     *
+     */
     @ParameterizedTest
     @MethodSource("providePartitionedValueForSetXTest")
     void setXTest(int input, int expected) {
 
         /**
-         * Setting x then checking if it was success or not using assert
+         * Setting x, then checking if it was success or not using assert
          */
         ComponentTestObject.setX(input);
         assertEquals(expected, ComponentTestObject.getX());
@@ -47,7 +51,6 @@ class ComponentTest {
      * all types of int value from negative to positive is supported
      *
      */
-
     private static Stream<Arguments> providePartitionedValueForSetXTest() {
         return Stream.of(
                 Arguments.of(200, 200),
@@ -57,7 +60,12 @@ class ComponentTest {
                 Arguments.of(-1220, -1220)
         );
     }
-
+    
+    /**
+     * Test case using input space partition for Y position.
+     * The values are fed dynamically one by one from the providePartitionedValueForSetYTest
+     *
+     */
     @ParameterizedTest
     @MethodSource("providePartitionedValueForSetYTest")
     void setYTest(int input, int expected) {
@@ -120,16 +128,15 @@ class ComponentTest {
         Exception exception = assertThrows(RuntimeException.class, () -> ComponentTestObject.setWidth(-100));
         assertEquals("Cannot set negative width", exception.getMessage());
     }
-
+    
+    /**
+     * Test case using input space partition for Component Height.
+     * The input domain is divided into three parts, 0, negative values and positive values
+     * Only 0 and positive value is accepted, since Heights cannot be negative.
+     *
+     */
     @Test
-    void setHeightTest() {
-        /**
-         * Test case using input space partition for Component Height.
-         * The input domain is divided into three parts, 0, negative values and positive values
-         * Only 0 and positive value is accepted, since Heights cannot be negative.
-         *
-         */
-
+    void setHeightTestWithException() {
         /**
          * Test of positive input space partition for height
          * should pass
@@ -156,7 +163,7 @@ class ComponentTest {
     }
 
     @Test
-    void setImagePathTest() {
+    void setImagePathTestWithException() {
 
         /**
          * Test case with valid file path
