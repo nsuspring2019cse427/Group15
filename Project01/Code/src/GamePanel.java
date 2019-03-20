@@ -12,7 +12,6 @@ public class GamePanel  extends JPanel implements KeyListener {
 	 * Game sounds initialization, fixes after testing the GameSound Class
 	 *
 	 */
-
 	private GameSound dieSound = new GameSound("sounds//die.wav");
 	private GameSound pointSound = new GameSound("sounds//point.wav");
 	private GameSound flapSound = new GameSound("sounds//flap.wav");
@@ -182,9 +181,10 @@ public class GamePanel  extends JPanel implements KeyListener {
 				if(!gameOver) dieSound.playAudioFeedback();
 				gameOver = true;
 				break;
-			} else if(bird.getX() == walls[i].getX()+1){
+			} else if(bird.getX() == walls[i].getX()){
 				//if bird passes one wall then counts a point
-				incrementScore();
+				this.points = incrementScore(this.points, 0.5);
+				pointSound.playAudioFeedback();
 			}	
 		}
 		
@@ -218,9 +218,8 @@ public class GamePanel  extends JPanel implements KeyListener {
 	
 	
 	//Increments the score
-	public double incrementScore(){
-		points += 0.5;
-		pointSound.playAudioFeedback();
+	public double incrementScore(double points, double amount){
+		points += amount;
 		return points;
 	}
 	

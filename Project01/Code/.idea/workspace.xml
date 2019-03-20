@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964abf8d-9a0b-4889-9b94-a1446bd8de29" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/GamePanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/GamePanelTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,34 +17,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/GamePanelTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
+            <state relative-caret-position="386">
+              <caret line="108" column="34" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#282#283#0" expanded="true" />
                 <element signature="e#335#336#0" expanded="true" />
                 <element signature="e#373#374#0" expanded="true" />
                 <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#916#917#0" expanded="true" />
-                <element signature="e#955#956#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Component.java">
+        <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="66" column="22" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
+            <state relative-caret-position="333">
+              <caret line="186" column="47" selection-start-line="186" selection-start-column="47" selection-end-line="186" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1353#1354#0" expanded="true" />
-                <element signature="e#1372#1373#0" expanded="true" />
-                <element signature="e#1398#1399#0" expanded="true" />
-                <element signature="e#1418#1419#0" expanded="true" />
-                <element signature="e#1450#1451#0" expanded="true" />
-                <element signature="e#1473#1474#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="180" column="8" selection-start-line="180" selection-start-column="8" selection-end-line="185" selection-end-column="54" />
+            <state relative-caret-position="202">
+              <caret line="62" column="41" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#532#533#0" expanded="true" />
@@ -85,18 +75,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="52" column="27" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -145,8 +123,8 @@
         <option value="$PROJECT_DIR$/tests/FlappyBirdTestSuite.java" />
         <option value="$PROJECT_DIR$/tests/GameSoundTest.java" />
         <option value="$PROJECT_DIR$/tests/ComponentTest.java" />
-        <option value="$PROJECT_DIR$/src/GamePanel.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/GamePanel.java" />
         <option value="$PROJECT_DIR$/tests/GamePanelTest.java" />
       </list>
     </option>
@@ -203,7 +181,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553081104655" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553082843297" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -307,32 +285,11 @@
       <workItem from="1552936647116" duration="1301000" />
       <workItem from="1553069510296" duration="8000" />
       <workItem from="1553071988003" duration="969000" />
-      <workItem from="1553079204197" duration="1884000" />
+      <workItem from="1553079204197" duration="3611000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ComponentTest - 2019.03.19 at 02h 02m 44s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentTest - 2019.03.19 at 02h 05m 56s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentTest - 2019.03.19 at 02h 07m 17s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentTest - 2019.03.19 at 02h 13m 46s.xml">
-      <configuration name="ComponentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BirdFlapTest - 2019.03.19 at 02h 13m 55s.xml">
-      <configuration name="BirdFlapTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BirdFlapTest - 2019.03.19 at 02h 25m 23s.xml">
-      <configuration name="BirdFlapTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameSoundTest - 2019.03.20 at 14h 58m 42s.xml">
-      <configuration name="GameSoundTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GameSoundTest - 2019.03.20 at 14h 59m 00s.xml">
       <configuration name="GameSoundTest" configurationId="JUnit" />
     </history-entry>
@@ -342,15 +299,36 @@
     <history-entry file="GamePanelTest - 2019.03.20 at 17h 17m 58s.xml">
       <configuration name="GamePanelTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="GamePanelTest - 2019.03.20 at 17h 48m 24s.xml">
+      <configuration name="GamePanelTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GamePanelTest - 2019.03.20 at 17h 49m 51s.xml">
+      <configuration name="GamePanelTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GamePanelTest - 2019.03.20 at 17h 50m 06s.xml">
+      <configuration name="GamePanelTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GamePanelTest - 2019.03.20 at 17h 50m 43s.xml">
+      <configuration name="GamePanelTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GamePanelTest - 2019.03.20 at 17h 51m 32s.xml">
+      <configuration name="GamePanelTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GamePanelTest - 2019.03.20 at 17h 52m 04s.xml">
+      <configuration name="GamePanelTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GamePanelTest - 2019.03.20 at 17h 53m 25s.xml">
+      <configuration name="GamePanelTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18254000" />
+    <option name="totallyTimeSpent" value="19981000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1400" height="837" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28645065" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28645065" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -359,7 +337,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -461,16 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="52" column="27" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BirdFlap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -495,23 +463,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="180" column="8" selection-start-line="180" selection-start-column="8" selection-end-line="185" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#625#626#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#705#706#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Component.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
+        <state relative-caret-position="258">
           <caret line="66" column="22" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -525,18 +479,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="62" column="41" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="186" column="47" selection-start-line="186" selection-start-column="47" selection-end-line="186" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/GamePanelTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
+        <state relative-caret-position="386">
+          <caret line="108" column="34" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#282#283#0" expanded="true" />
             <element signature="e#335#336#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
             <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#916#917#0" expanded="true" />
-            <element signature="e#955#956#0" expanded="true" />
           </folding>
         </state>
       </provider>

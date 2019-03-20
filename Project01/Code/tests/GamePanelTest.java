@@ -2,9 +2,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.stream.Stream;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
@@ -38,26 +42,32 @@ class GamePanelTest extends JPanel {
 
     @Test
     void start() {
+
         /**
          * Test to check game can start by calling Start method.
+         * if it has started the return value will be always true
          *
          */
         assertTrue(gamePanelTestObject.Start());
     }
 
+    @Disabled("gravityPull method NOT feasible for testing")
     @Test
     void gravityPullTest() {
-        gamePanelTestObject.gravityPull();
+
     }
 
+    @Disabled("scrollWalls method NOT feasible for testing")
     @Test
     void scrollWalls() {
     }
 
+    @Disabled("scrollBG method NOT feasible for testing")
     @Test
     void scrollBG() {
     }
 
+    @Disabled("scrollGround method NOT feasible for testing")
     @Test
     void scrollGround() {
     }
@@ -66,7 +76,6 @@ class GamePanelTest extends JPanel {
     @Disabled("Paint method NOT feasible for testing")
     @Test
     void paint() {
-        //gamePanelTestObject.paint();
     }
 
     @Test
@@ -77,8 +86,28 @@ class GamePanelTest extends JPanel {
     void keyPressed() {
     }
 
-    @Test
-    void incrementScore() {
+    /**
+     * Parameterized test for IncrementScore Method
+     */
+    @ParameterizedTest
+    @MethodSource("providePartitionedValueForIncrementScoreTest")
+    void incrementScore(double input, double expected) {
+        assertEquals(expected, gamePanelTestObject.incrementScore(0, input), 1);
+
+    }
+
+    /**
+     * Test case using input space partition for IncreamentScore.
+     * The input domain is divided into three parts, 0, negative values and positive values
+     * all types of double value from negative to positive is supported
+     *
+     */
+    private static Stream<Arguments> providePartitionedValueForIncrementScoreTest() {
+        return Stream.of(
+                Arguments.of(200.0, 200.0),
+                Arguments.of(0.0, 0.0),
+                Arguments.of(-1220.0, -1220.0)
+        );
     }
 
     @Test
@@ -88,6 +117,7 @@ class GamePanelTest extends JPanel {
 
     @Test
     void isStarted() {
+
     }
 
     @Test
