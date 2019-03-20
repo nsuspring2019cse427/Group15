@@ -7,12 +7,10 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.stream.Stream;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
-
 
 
 /**
@@ -22,8 +20,6 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * Possible test cases are added though
  */
-
-
 
 
 class GamePanelTest extends JPanel {
@@ -39,15 +35,14 @@ class GamePanelTest extends JPanel {
     void tearDown() {
         gamePanelTestObject = null;
     }
-
+    
+    /**
+     * Test to check game can start by calling Start method.
+     * if it has started the return value will be always true
+     *
+     */
     @Test
     void start() {
-
-        /**
-         * Test to check game can start by calling Start method.
-         * if it has started the return value will be always true
-         *
-         */
         assertTrue(gamePanelTestObject.Start());
     }
 
@@ -72,18 +67,9 @@ class GamePanelTest extends JPanel {
     void scrollGround() {
     }
 
-
     @Disabled("Paint method NOT feasible for testing")
     @Test
     void paint() {
-    }
-
-    @Test
-    void checkCollision() {
-    }
-
-    @Test
-    void keyPressed() {
     }
 
     /**
@@ -112,19 +98,18 @@ class GamePanelTest extends JPanel {
 
     @Test
     void createWalls() {
-
+        assertTrue(gamePanelTestObject.createWalls());
     }
     
-
     /**
      * Parameterized test for isStarted And setStarted Method
-     * 
+     *
      */
     @ParameterizedTest
     @MethodSource("providePartitionedValueForIsStartedAndSetStartedCombinedTest")
-    void isStartedAndSetStartedCombinedTest(double input, double expected) {
-        assertEquals(expected, gamePanelTestObject.incrementScore(0, input), 1);
-
+    void isStartedAndSetStartedCombinedTest(boolean input, boolean expected) {
+        gamePanelTestObject.setStarted(input);
+        assertEquals(expected, gamePanelTestObject.isStarted());
     }
 
     /**
@@ -138,14 +123,8 @@ class GamePanelTest extends JPanel {
             Arguments.of(false, false)
         );
     }
-    
-    /**
-     * isGameOver has only one implicit parameter,
-     * It is either true or false
-     * So there's test for these two states
-     *
-     */
 
+    
     @Test
     void isGameOverTest() {
         /**
@@ -165,6 +144,31 @@ class GamePanelTest extends JPanel {
 
 
     /**
+     * Parameterized test for isGameOver
+     *
+     */
+    @ParameterizedTest
+    @MethodSource("providePartitionedValueForIsGameOverTest")
+    void isGameOverTest(boolean input, boolean expected) {
+        gamePanelTestObject.setGameOver(input);
+        assertEquals(expected, gamePanelTestObject.isGameOver());
+
+    }
+
+    /**
+     * isGameOver has only one implicit parameter,
+     * It is either true or false
+     * So there's test for these two states
+     *
+     */
+    private static Stream<Arguments> providePartitionedValueForIsGameOverTest() {
+        return Stream.of(
+                Arguments.of(true, true),
+                Arguments.of(false, false)
+        );
+    }
+    
+    /**
      * setGameOver has only one parameter,
      * takes the the state of gameover as boolean and saves it
      * It is either true or false
@@ -172,7 +176,7 @@ class GamePanelTest extends JPanel {
      *
      */
     @Test
-    void setGameOver() {
+    void setGameOverTest() {
         /**
          * Setting gameover to true and Testing the method
          *
@@ -188,10 +192,12 @@ class GamePanelTest extends JPanel {
         assertFalse(gamePanelTestObject.isGameOver());
     }
 
+    @Disabled("keyReleased method NOT feasible for testing, it has no content")
     @Test
     void keyReleased() {
     }
 
+    @Disabled("keyTyped method NOT feasible for testing, it has no content")
     @Test
     void keyTyped() {
     }
