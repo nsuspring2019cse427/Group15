@@ -19,7 +19,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 
 
 	public int WIDTH = 700, HEIGHT = 490;
-	private double score = 0; 
+	private double points = 0;
 	
 	//background
 	private Component background1 = new Component(0, 0, 700, 490, "images//background.png");
@@ -44,8 +44,8 @@ public class GamePanel  extends JPanel implements KeyListener {
 	}
 	
 	//Create the wall and
-	public void Start(){
-		createWalls();
+	public boolean Start(){
+		return createWalls();
 	}
 	
 	
@@ -158,7 +158,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 		else if (!gameOver && started){	
 			g.setColor(Color.green);
 			g.setFont(new Font("Arial", 1, 20));
-			g.drawString(String.valueOf("Score:"+score), 10 , 25);
+			g.drawString(String.valueOf("Score:"+points), 10 , 25);
 		}
 		
 		//Draws Grounds
@@ -184,7 +184,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 				break;
 			} else if(bird.getX() == walls[i].getX()+1){
 				//if bird passes one wall then counts a point
-				score();
+				incrementScore();
 			}	
 		}
 		
@@ -204,7 +204,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 			if(gameOver){
 				bird.setY((HEIGHT /2));
 				bird.setX(WIDTH/2 - 150);
-				score = 0;
+				points = 0;
 				gameOver = false;
 			}
 				
@@ -218,12 +218,13 @@ public class GamePanel  extends JPanel implements KeyListener {
 	
 	
 	//Increments the score
-	public void score(){
-		score+= 0.5;
+	public double incrementScore(){
+		points += 0.5;
 		pointSound.playAudioFeedback();
+		return points;
 	}
 	
-	public void createWalls(){
+	public boolean createWalls(){
 		int i = 0;
 		int x = 600; // First walls distance from very right side
 		
@@ -259,7 +260,8 @@ public class GamePanel  extends JPanel implements KeyListener {
 		i++;
 		walls[i] = new Component(x, -170, width, height, "images//wallDown.png");
 		x = walls[i].getX()+220;
-		
+
+		return true;
 	}
 	
 	//Setters and Getters

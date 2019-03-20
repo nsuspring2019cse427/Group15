@@ -6,19 +6,25 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GamePanelTest {
 
-    private GamePanel GamePanelTestObject;
+    private GamePanel gamePanelTestObject;
 
     @BeforeEach
     void setUp() {
-        GamePanelTestObject = new GamePanel();
+        gamePanelTestObject = new GamePanel();
     }
 
     @AfterEach
     void tearDown() {
+        gamePanelTestObject = null;
     }
 
     @Test
     void start() {
+        /**
+         * Test to check game can start by calling Start method.
+         * There
+         */
+        assertTrue(gamePanelTestObject.Start());
     }
 
     @Test
@@ -50,7 +56,7 @@ class GamePanelTest {
     }
 
     @Test
-    void score() {
+    void incrementScore() {
     }
 
     @Test
