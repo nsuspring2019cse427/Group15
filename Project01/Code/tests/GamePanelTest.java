@@ -114,16 +114,31 @@ class GamePanelTest extends JPanel {
     void createWalls() {
 
     }
+    
 
-    @Test
-    void isStarted() {
+    /**
+     * Parameterized test for isStarted And setStarted Method
+     * 
+     */
+    @ParameterizedTest
+    @MethodSource("providePartitionedValueForIsStartedAndSetStartedCombinedTest")
+    void isStartedAndSetStartedCombinedTest(double input, double expected) {
+        assertEquals(expected, gamePanelTestObject.incrementScore(0, input), 1);
 
     }
 
-    @Test
-    void setStarted() {
+    /**
+     * Test case using input space partition for isStarted And setStarted.
+     * The input domain is divided into two parts, true and false
+     *
+     */
+    private static Stream<Arguments> providePartitionedValueForIsStartedAndSetStartedCombinedTest() {
+        return Stream.of(
+            Arguments.of(true, true),
+            Arguments.of(false, false)
+        );
     }
-
+    
     /**
      * isGameOver has only one implicit parameter,
      * It is either true or false
