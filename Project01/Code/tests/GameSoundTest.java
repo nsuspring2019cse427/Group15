@@ -57,7 +57,7 @@ public class GameSoundTest {
     }
 
     @Parameterized.Parameters
-    public static Collection primeNumbers() {
+    public static Collection SoundFiles() {
 
         /**
          * Partitioning the input domain into two parts

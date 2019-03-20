@@ -6,8 +6,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GamePanelTest {
 
+    private GamePanel GamePanelTestObject;
+
     @BeforeEach
     void setUp() {
+        GamePanelTestObject = new GamePanel();
     }
 
     @AfterEach
