@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -27,23 +28,23 @@ public class GameSoundTest {
     private String inputFile;
     private boolean expected;
 
-
+    /**
+     * Creating a new object each time a test is run
+     * from the input space partition
+     *
+     */
     @Before
     public void setUp() throws Exception {
-        /**
-         * Creating a new object each time a test is run
-         * from the input space partition
-         *
-         */
         testObject = new GameSound(inputFile);
     }
 
+    /**
+     * Discarding Objects after each call
+     *
+     **/
     @After
     public void tearDown() throws Exception {
-        /**
-         * Discarding Objects after each call
-         *
-         **/
+
         testObject = null;
     }
 
@@ -56,16 +57,17 @@ public class GameSoundTest {
         this.expected = expected;
     }
 
+
+    /**
+     * Partitioning the input domain into two parts null and Valid String
+     *
+     * Graph Partition:
+     * 01 Valid audio input file
+     * 02 Invalid audio input file line
+     *
+     **/
     @Parameterized.Parameters
     public static Collection SoundFiles() {
-
-        /**
-         * Partitioning the input domain into two parts
-         *
-         * 01 Valid audio input file
-         * 02 Invalid audio input file line
-         *
-         **/
         return Arrays.asList(new Object[][] {
                 { "sounds//die.wav", true },
                 { "sounds//point.wav", true },
@@ -75,14 +77,28 @@ public class GameSoundTest {
         });
     }
 
+    /**
+     * Test for every input audio file
+     *
+     **/
     @Test
     public void playAudioFeedbackTest() {
-
-        /**
-         * Test for every input audio file
-         *
-         **/
         assertEquals(expected, testObject.playAudioFeedback());
     }
+
+    /**
+     * Graph Partition:
+     * 02 Invalid audio input file line
+     *
+     **/
+
+    @Test
+    public void playAudioFeedbackTestWithException() {
+        Exception exception = assertThrows(RuntimeException.class, () -> testObject.playAudioFeedback());
+        assertEquals("Cannot set negative width", exception.getMessage());
+    }
+
+
+
 
 }

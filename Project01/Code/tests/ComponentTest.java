@@ -94,6 +94,8 @@ class ComponentTest {
         );
     }
 
+
+
     /**
      * Test case using Graph Partitioning for Component Width.
      * The input domain is divided into three parts, 0, negative values and positive values
@@ -130,9 +132,6 @@ class ComponentTest {
         Exception exception = assertThrows(RuntimeException.class, () -> ComponentTestObject.setWidth(-100));
         assertEquals("Cannot set negative width", exception.getMessage());
     }
-
-
-
 
 
 
