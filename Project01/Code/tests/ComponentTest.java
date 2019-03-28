@@ -185,7 +185,7 @@ class ComponentTest {
 
 
     /**
-     * Test case with valid file path
+     * Test case with valid file path Using Graph Partition if case
      * should pass with no exception
      *
      */
@@ -193,11 +193,10 @@ class ComponentTest {
     void setImagePathTestWithValidPath() {
         ComponentTestObject.setImagePath("images//background.png");
         assertEquals("images//background.png", ComponentTestObject.getImagePath());
-
     }
 
     /**
-     * Test case with invalid file path
+     * Test case with invalid file path Using Graph Partition else case
      * should pass with exception
      * @Throws RuntimeException as the path is not valid.
      */
