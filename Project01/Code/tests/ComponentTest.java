@@ -94,93 +94,121 @@ class ComponentTest {
         );
     }
 
+    /**
+     * Test case using Graph Partitioning for Component Width.
+     * The input domain is divided into three parts, 0, negative values and positive values
+     * Only 0 and positive value is accepted, since widths cannot be negative.
+     *
+     */
 
-
+    /**
+     * Test of positive Graph Partition  for Width
+     * should pass
+     */
     @Test
-    void setWidthTest() {
-        /**
-         * Test case using input space partition for Component Width.
-         * The input domain is divided into three parts, 0, negative values and positive values
-         * Only 0 and positive value is accepted, since widths cannot be negative.
-         *
-         */
-
-        /**
-         * Test of positive input space partition for Width
-         * should pass
-         */
+    void setWidthTestWithGreaterThanZeroParameter() {
         ComponentTestObject.setWidth(200);
         assertEquals(200, ComponentTestObject.getWidth());
-
-
-        /**
-         * Test case of 0 for Width
-         * should pass
-         */
+    }
+    /**
+     * Test case of 0 for Graph Partitioned Width
+     * should pass
+     */
+    @Test
+    void setWidthTestWithZeroParameter() {
         ComponentTestObject.setWidth(0);
         assertEquals(0, ComponentTestObject.getWidth());
+    }
 
-        /**
-         * Test case of negative input space partition for Width
-         * should pass with exception
-         * @Throws RuntimeException as the value is not acceptable.
-         */
+    /**
+     * Test case of negative Graph Partition  for Width
+     * should pass with exception
+     * @Throws RuntimeException as the value is not acceptable.
+     */
+    @Test
+    void setWidthTestWithNegativeParameterAndException() {
         Exception exception = assertThrows(RuntimeException.class, () -> ComponentTestObject.setWidth(-100));
         assertEquals("Cannot set negative width", exception.getMessage());
     }
-    
+
+
+
+
+
+
     /**
-     * Test case using input space partition for Component Height.
-     * The input domain is divided into three parts, 0, negative values and positive values
+     * Test case using Graph partition for Component Height.
+     * The value of Height is divided into three parts, 0, negative values and positive values
      * Only 0 and positive value is accepted, since Heights cannot be negative.
      *
      */
+
+
+    /**
+     * Test of positive input space partition for height
+     * should pass
+     */
     @Test
-    void setHeightTestWithException() {
-        /**
-         * Test of positive input space partition for height
-         * should pass
-         */
+    void setHeightTestWithZeroParameter() {
+
         ComponentTestObject.setHeight(200);
         assertEquals(200, ComponentTestObject.getHeight());
-
-
-        /**
-         * Test case of 0 for Height
-         * should pass
-         */
-        ComponentTestObject.setHeight(0);
-        assertEquals(0, ComponentTestObject.getHeight());
-
-        /**
-         * Test case of negative input space partition for height
-         * should pass with exception
-         * @Throws RuntimeException as the value is not acceptable.
-         */
-        Exception exception = assertThrows(RuntimeException.class, () -> ComponentTestObject.setHeight(-100));
-        assertEquals("Cannot set negative height", exception.getMessage());
-
     }
 
-    @Test
-    void setImagePathTestWithException() {
 
-        /**
-         * Test case with valid file path
-         * should pass with no exception
-         *
-         */
+    /**
+     * Test case of 0 for Height Using Graph Partition
+     * should pass
+     */
+    @Test
+    void setHeightTestGreaterThanZeroParameter() {
+
+        ComponentTestObject.setHeight(0);
+        assertEquals(0, ComponentTestObject.getHeight());
+    }
+
+
+    /**
+     * Test case of negative Graph Partition for height
+     * should pass with exception
+     * @Throws RuntimeException as the value is not acceptable.
+     */
+
+    @Test
+    void setHeightTestWithNegativeParameterAndException() {
+
+        Exception exception = assertThrows(RuntimeException.class, () -> ComponentTestObject.setHeight(-100));
+        assertEquals("Cannot set negative height", exception.getMessage());
+    }
+
+
+
+
+    /**
+     * Test case with valid file path
+     * should pass with no exception
+     *
+     */
+    @Test
+    void setImagePathTestWithValidPath() {
         ComponentTestObject.setImagePath("images//background.png");
         assertEquals("images//background.png", ComponentTestObject.getImagePath());
 
-        /**
-         * Test case with invalid file path
-         * should pass with exception
-         * @Throws RuntimeException as the path is not valid.
-         */
+    }
+
+    /**
+     * Test case with invalid file path
+     * should pass with exception
+     * @Throws RuntimeException as the path is not valid.
+     */
+    @Test
+    void setImagePathTestWithInvalidPathAndException() {
         Exception exception = assertThrows(RuntimeException.class, () -> ComponentTestObject.setImagePath("invalidFilePath"));
         assertEquals("Invalid file", exception.getMessage());
+
     }
+    
+
 
     @Test
     void getXTest() {
