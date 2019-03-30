@@ -54,7 +54,6 @@ class ComponentTest {
     private static Stream<Arguments> providePartitionedValueForSetXTest() {
         return Stream.of(
                 Arguments.of(200, 200),
-                Arguments.of(200, 200),
                 Arguments.of(0, 0),
                 Arguments.of(-110, -110),
                 Arguments.of(-1220, -1220)
@@ -87,7 +86,6 @@ class ComponentTest {
     private static Stream<Arguments> providePartitionedValueForSetYTest() {
         return Stream.of(
                 Arguments.of(200, 200),
-                Arguments.of(200, 200),
                 Arguments.of(0, 0),
                 Arguments.of(-110, -110),
                 Arguments.of(-1220, -1220)
@@ -112,6 +110,7 @@ class ComponentTest {
         ComponentTestObject.setWidth(200);
         assertEquals(200, ComponentTestObject.getWidth());
     }
+
     /**
      * Test case of 0 for Graph Partitioned Width
      * should pass

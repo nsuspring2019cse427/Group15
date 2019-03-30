@@ -19,9 +19,8 @@ public class GameSound {
 			return true;
 		}
 		catch(Exception e) {
-			System.out.println("Sound file loading error!");
+			throw new RuntimeException("Sound file loading error!");
 		}
-		return false;
 	}
 
 }

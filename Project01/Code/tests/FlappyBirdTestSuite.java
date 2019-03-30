@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)
 @SuiteDisplayName("JUnit FlappyBird Test Suite")
-@SelectClasses({BirdFlapTest.class, GamePanelTest.class, ComponentTest.class, GameSoundTest.class})
+@SelectClasses({BirdFlapTest.class, GamePanelTest.class, ComponentTest.class, GameSoundTest.class, GameSoundTestForException.class})
 
 public class FlappyBirdTestSuite {
     

@@ -63,7 +63,7 @@ public class GameSoundTest {
      *
      * Graph Partition:
      * 01 Valid audio input file
-     * 02 Invalid audio input file line
+     * 02 Invalid audio input file line in GameSoundTestForException
      *
      **/
     @Parameterized.Parameters
@@ -86,19 +86,8 @@ public class GameSoundTest {
         assertEquals(expected, testObject.playAudioFeedback());
     }
 
-    /**
-     * Graph Partition:
-     * 02 Invalid audio input file line
-     *
-     **/
-
-    @Test
-    public void playAudioFeedbackTestWithException() {
-        Exception exception = assertThrows(RuntimeException.class, () -> testObject.playAudioFeedback());
-        assertEquals("Cannot set negative width", exception.getMessage());
-    }
-
-
-
-
 }
+
+
+
+
