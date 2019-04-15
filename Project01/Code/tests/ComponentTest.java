@@ -29,6 +29,21 @@ class ComponentTest {
         ComponentTestObject = null;
     }
 
+
+    @Test
+    void detectCollisionTest() {
+
+        /**
+         * Test case with valid file path to check if the getImagePath returns right path
+         * should pass with no exception
+         *
+         */
+        ComponentTestObject.setImagePath("images//wallUp.png");
+        assertEquals("images//wallUp.png", ComponentTestObject.getImagePath());
+    }
+
+
+
     /**
      * Test case using input space partition for X position.
      * The values are fed dynamically one by one from the providePartitionedValueForSetXTest
@@ -180,8 +195,6 @@ class ComponentTest {
     }
 
 
-
-
     /**
      * Test case with valid file path Using Graph Partition if case
      * should pass with no exception
@@ -205,7 +218,6 @@ class ComponentTest {
 
     }
     
-
 
     @Test
     void getXTest() {

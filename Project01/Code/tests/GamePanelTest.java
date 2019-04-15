@@ -96,9 +96,13 @@ class GamePanelTest extends JPanel {
         );
     }
 
+    /**
+     * Test case for checking if 8 walls are created properly
+     *
+     */
     @Test
     void createWalls() {
-        assertTrue(gamePanelTestObject.createWalls());
+        assertEquals(gamePanelTestObject.walls, gamePanelTestObject.createWalls());
     }
     
     /**
@@ -124,24 +128,26 @@ class GamePanelTest extends JPanel {
         );
     }
 
-    
+    /**
+     * Setting gameover to true and Testing the method
+     *
+     */
     @Test
-    void isGameOverTest() {
-        /**
-         * Setting gameover to true and Testing the method
-         *
-         */
+    void isGameOverTestWithTrue() {
+
         gamePanelTestObject.setGameOver(true);
         assertTrue(gamePanelTestObject.isGameOver());
+    }
 
-        /**
-         * Setting gameover to False and Testing the method
-         *
-         */
+    /**
+     * Setting gameover to False and Testing the method
+     *
+     */
+    @Test
+    void isGameOverTestWithFalse() {
         gamePanelTestObject.setGameOver(false);
         assertFalse(gamePanelTestObject.isGameOver());
     }
-
 
     /**
      * Parameterized test for isGameOver
@@ -191,6 +197,8 @@ class GamePanelTest extends JPanel {
         gamePanelTestObject.setGameOver(false);
         assertFalse(gamePanelTestObject.isGameOver());
     }
+
+
 
     @Disabled("keyReleased method NOT feasible for testing, it has no content")
     @Test

@@ -22,8 +22,15 @@ public class Component {
 	//Draw Method
 	public boolean draw(Graphics g){
 		ImageIcon birdImage = new ImageIcon(imagePath);
-		g.drawImage(birdImage.getImage(),x,y,null);
-		return true;
+		return (g.drawImage(birdImage.getImage(),x,y,null));
+	}
+
+	public boolean detectCollision(Component wall){
+
+		//Creates bound of bird and walls
+		Rectangle birdBound = new Rectangle( this.getX(), this.getY(),25,25);
+		Rectangle WallRect=new Rectangle(wall.getX(),wall.getY(),wall.getWidth(),wall.getHeight());
+		return WallRect.intersects(birdBound);
 	}
 	
 	
@@ -54,6 +61,8 @@ public class Component {
 			this.imagePath = imagePath;
 		} else throw new RuntimeException("Invalid file");
 	}
+
+
 
 
 	//Getters of Component

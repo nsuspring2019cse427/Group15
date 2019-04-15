@@ -26,7 +26,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 	//Bird
 	private Component bird = new Component((WIDTH/ 2 - 150), (HEIGHT /2) - 40, 50 , 36, "images//bird.png");
 	//Wall array
-	private Component[] walls = new Component[8];
+	public Component[] walls = new Component[8];
 	//Ground
 	private Component ground1 = new Component(0, 450, 710, 490, "images//ground.png");
 	private Component ground2 = new Component(700, 450, 710, 490, "images//ground.png");
@@ -44,7 +44,9 @@ public class GamePanel  extends JPanel implements KeyListener {
 	
 	//Create the wall and
 	public boolean Start(){
-		return createWalls();
+		if(this.createWalls() == walls)
+			return true;
+		else return false;
 	}
 	
 	
@@ -54,7 +56,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 		bird.setY(bird.getY() + 3);						//Starts falling by One Pixel
 		
 		try{ Thread.sleep(3); } catch (Exception e) {}
-		
+
 		// checks if it touches the ground or Sky
 		if(bird.getY() > 450 || bird.getY() <= 0){ 
 			// Plays hit Sound and if bird touches anything then makes gameOver true.
@@ -77,12 +79,10 @@ public class GamePanel  extends JPanel implements KeyListener {
 			} else {
 				walls[i].setX(700);
 				walls[i + 1].setX(700);
-
 			}
 		}
 		
 		try{ Thread.sleep(5); }  catch(Exception e) {}
-		
 		super.repaint();
 	}
 	
@@ -168,26 +168,22 @@ public class GamePanel  extends JPanel implements KeyListener {
 	
 	
 	//Checks Collisions between wall and bird
-	public void checkCollision(){
-		
-		//Creates bound of bird
-		Rectangle birdBound = new Rectangle( bird.getX(), bird.getY(),25,25);
-		
+	public void collisionOrScore(){
 		//Creates bound of all walls
-		for(int i = 0; i < walls.length; i++){
-			Rectangle WallRect=new Rectangle(walls[i].getX(),walls[i].getY(),walls[i].getWidth(),walls[i].getHeight());
-			if(WallRect.intersects(birdBound)==true){
+		for(int i = 0; i < walls.length; i++) {
+
+			if (bird.detectCollision(walls[i])) {
 				bird.setX(-500);
-				if(!gameOver) dieSound.playAudioFeedback();
+				if (!gameOver) dieSound.playAudioFeedback();
 				gameOver = true;
 				break;
-			} else if(bird.getX() == walls[i].getX()){
+
+			} else if (bird.getX() == walls[i].getX()) {
 				//if bird passes one wall then counts a point
 				this.points = incrementScore(this.points, 0.5);
 				pointSound.playAudioFeedback();
-			}	
+			}
 		}
-		
 	}
 	
 	
@@ -223,7 +219,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 		return points;
 	}
 	
-	public boolean createWalls(){
+	public Component[] createWalls(){
 		int i = 0;
 		int x = 600; // First walls distance from very right side
 		
@@ -260,7 +256,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 		walls[i] = new Component(x, -170, width, height, "images//wallDown.png");
 		x = walls[i].getX()+220;
 
-		return true;
+		return walls;
 	}
 	
 	//Setters and Getters

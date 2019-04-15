@@ -27,7 +27,7 @@ public class Main {
 		while(panel.isStarted()){
 			panel.gravityPull();
 			panel.scrollWalls();
-			panel.checkCollision();
+			panel.collisionOrScore();
 			panel.scrollBG();
 			panel.scrollGround();
 			

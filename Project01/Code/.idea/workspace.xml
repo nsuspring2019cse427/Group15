@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964abf8d-9a0b-4889-9b94-a1446bd8de29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/GameSoundTestForException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Code/ComponentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Code/ComponentTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Code/GameSoundTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Code/GameSoundTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameSound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameSound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Code.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Code/GamePanelTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Code/GamePanelTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/ComponentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ComponentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/FlappyBirdTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/FlappyBirdTestSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/GameSoundTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/GameSoundTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/GamePanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/GamePanelTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/GamePanelTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="30" column="46" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="46" />
+            <state relative-caret-position="194">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#779#780#0" expanded="true" />
@@ -34,7 +34,44 @@
                 <element signature="e#1092#1093#0" expanded="true" />
                 <element signature="e#1147#1148#0" expanded="true" />
                 <element signature="e#2504#2505#0" expanded="true" />
-                <element signature="e#2565#2566#0" expanded="true" />
+                <element signature="e#2594#2595#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GameSound.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3915">
+              <caret line="261" column="4" lean-forward="true" selection-start-line="261" selection-start-column="4" selection-end-line="261" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#6393#6394#0" expanded="true" />
+                <element signature="e#6466#6467#0" expanded="true" />
+                <element signature="e#6520#6521#0" expanded="true" />
+                <element signature="e#6597#6598#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,32 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/GameSoundTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
+            <state relative-caret-position="258">
               <caret line="65" column="68" selection-start-line="65" selection-start-column="68" selection-end-line="65" selection-end-column="68" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/GameSoundTestForException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-152">
-              <caret line="7" column="38" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameSound.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Component.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="69" />
+            <state relative-caret-position="224">
+              <caret line="27" column="34" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1353#1354#0" expanded="true" />
@@ -97,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/BirdFlapTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="390">
               <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -106,7 +119,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/FlappyBirdTestSuite.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -118,11 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="84" selection-end-line="266" />
+            <state relative-caret-position="-50">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#532#533#0" expanded="true" />
@@ -130,6 +143,15 @@
                 <element signature="e#663#664#0" expanded="true" />
                 <element signature="e#705#706#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BirdFlap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="13" selection-start-line="12" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -154,6 +176,7 @@
       <find>audi</find>
       <find>score</find>
       <find>score()</find>
+      <find>check</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,22 +185,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Component.java" />
         <option value="$PROJECT_DIR$/src/BirdFlap.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/GamePanel.java" />
-        <option value="$PROJECT_DIR$/tests/GamePanelTest.java" />
         <option value="$PROJECT_DIR$/tests/BirdFlapTest.java" />
-        <option value="$PROJECT_DIR$/tests/ComponentTest.java" />
         <option value="$PROJECT_DIR$/tests/GameSoundTestForException.java" />
         <option value="$PROJECT_DIR$/src/GameSound.java" />
         <option value="$PROJECT_DIR$/tests/GameSoundTest.java" />
         <option value="$PROJECT_DIR$/tests/FlappyBirdTestSuite.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/tests/GamePanelTest.java" />
+        <option value="$PROJECT_DIR$/src/Component.java" />
+        <option value="$PROJECT_DIR$/src/GamePanel.java" />
+        <option value="$PROJECT_DIR$/tests/ComponentTest.java" />
       </list>
     </option>
   </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="Rerun Failed Tests" />
+    </enabled-run-configurations>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="y" value="136" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
@@ -187,22 +215,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Code" type="b2602c69:ProjectViewProjectNode" />
               <item name="Code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Code" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Code" type="462c0819:PsiDirectoryNode" />
-              <item name="sounds" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Code" type="b2602c69:ProjectViewProjectNode" />
@@ -218,11 +237,15 @@
               <item name="Code" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
+            <path>
+              <item name="Code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 11 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -233,13 +256,13 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553926559018" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555322627257" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -263,7 +286,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FlappyBirdTestSuite">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BirdFlapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Code" />
       <option name="PACKAGE_NAME" value="" />
@@ -277,15 +307,6 @@
       <module name="Code" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FlappyBirdTestSuite" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GamePanelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Code" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GamePanelTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -311,11 +332,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.FlappyBirdTestSuite" />
         <item itemvalue="JUnit.GameSoundTestForException" />
         <item itemvalue="JUnit.GameSoundTest" />
         <item itemvalue="JUnit.BirdFlapTest" />
-        <item itemvalue="JUnit.GamePanelTest" />
       </list>
     </recent_temporary>
   </component>
@@ -343,29 +364,15 @@
       <workItem from="1553095274358" duration="1218000" />
       <workItem from="1553096586996" duration="266000" />
       <workItem from="1553923500694" duration="2011000" />
-      <workItem from="1553926111417" duration="433000" />
+      <workItem from="1553926111417" duration="871000" />
+      <workItem from="1554010647928" duration="934000" />
+      <workItem from="1554809037649" duration="1303000" />
+      <workItem from="1555317567666" duration="899000" />
+      <workItem from="1555320339995" duration="2237000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FlappyBirdTestSuite - 2019.03.20 at 21h 38m 17s.xml">
-      <configuration name="FlappyBirdTestSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FlappyBirdTestSuite - 2019.03.20 at 21h 42m 10s.xml">
-      <configuration name="FlappyBirdTestSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameSoundTest - 2019.03.28 at 11h 26m 38s.xml">
-      <configuration name="GameSoundTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameSoundTest - 2019.03.28 at 11h 29m 37s.xml">
-      <configuration name="GameSoundTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FlappyBirdTestSuite - 2019.03.30 at 11h 46m 06s.xml">
-      <configuration name="FlappyBirdTestSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameSoundTest - 2019.03.30 at 11h 47m 02s.xml">
-      <configuration name="GameSoundTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GameSoundTest - 2019.03.30 at 12h 03m 00s.xml">
       <configuration name="GameSoundTest" configurationId="JUnit" />
     </history-entry>
@@ -378,21 +385,40 @@
     <history-entry file="GameSoundTestForException - 2019.03.30 at 12h 14m 48s.xml">
       <configuration name="GameSoundTestForException" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="FlappyBirdTestSuite - 2019.03.30 at 12h 15m 59s.xml">
+      <configuration name="FlappyBirdTestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlappyBirdTestSuite - 2019.04.09 at 18h 14m 15s.xml">
+      <configuration name="FlappyBirdTestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlappyBirdTestSuite - 2019.04.09 at 18h 14m 47s.xml">
+      <configuration name="FlappyBirdTestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlappyBirdTestSuite - 2019.04.09 at 18h 14m 55s.xml">
+      <configuration name="FlappyBirdTestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlappyBirdTestSuite - 2019.04.09 at 18h 15m 04s.xml">
+      <configuration name="FlappyBirdTestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlappyBirdTestSuite - 2019.04.09 at 18h 15m 31s.xml">
+      <configuration name="FlappyBirdTestSuite" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25925000" />
+    <option name="totallyTimeSpent" value="31736000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="136" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29899856" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31616595" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Duplicate detector" weight="0.3299363" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31082803" />
@@ -476,6 +502,26 @@
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/GameSoundTestForException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BirdFlap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -485,25 +531,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="907">
-          <caret line="286" column="5" lean-forward="true" selection-start-line="286" selection-start-column="5" selection-end-line="286" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="164">
+          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/GamePanelTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="46" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="46" />
+        <state relative-caret-position="194">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#779#780#0" expanded="true" />
@@ -513,39 +549,39 @@
             <element signature="e#1092#1093#0" expanded="true" />
             <element signature="e#1147#1148#0" expanded="true" />
             <element signature="e#2504#2505#0" expanded="true" />
-            <element signature="e#2565#2566#0" expanded="true" />
+            <element signature="e#2594#2595#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/BirdFlapTest.java">
+    <entry file="file://$PROJECT_DIR$/tests/GameSoundTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        <state relative-caret-position="258">
+          <caret line="65" column="68" selection-start-line="65" selection-start-column="68" selection-end-line="65" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
+    <entry file="file://$PROJECT_DIR$/src/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="84" selection-end-line="266" />
+        <state relative-caret-position="3915">
+          <caret line="261" column="4" lean-forward="true" selection-start-line="261" selection-start-column="4" selection-end-line="261" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#625#626#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#705#706#0" expanded="true" />
+            <element signature="e#6393#6394#0" expanded="true" />
+            <element signature="e#6466#6467#0" expanded="true" />
+            <element signature="e#6520#6521#0" expanded="true" />
+            <element signature="e#6597#6598#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Component.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="69" />
+        <state relative-caret-position="224">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1353#1354#0" expanded="true" />
@@ -558,30 +594,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameSound.java">
+    <entry file="file://$PROJECT_DIR$/tests/BirdFlapTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/GameSoundTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="65" column="68" selection-start-line="65" selection-start-column="68" selection-end-line="65" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/GameSoundTestForException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-152">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="38" />
+        <state relative-caret-position="390">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -594,6 +610,20 @@
           <caret line="7" column="130" selection-start-line="7" selection-start-column="130" selection-end-line="7" selection-end-column="130" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ComponentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -655,7 +685,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
