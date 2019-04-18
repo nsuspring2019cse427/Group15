@@ -14,6 +14,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class GameGUITest {
         
+        private Screen scr;
+        
         @BeforeEach
         void setUp() {
              Screen scr = new Screen();
