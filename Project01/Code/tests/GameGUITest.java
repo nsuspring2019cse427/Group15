@@ -14,5 +14,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class GameGUITest {
         
-          Screen s = new Screen();
+        @BeforeEach
+        void setUp() {
+             Screen scr = new Screen();
+        }
+        
+        @AfterEach
+        void tearDown() {
+                scr = null;
+        }
+        
+        @Test
+        void GameInitializationScreenTest() {
+                assertNotNull(scr.exist("images//gameInitializtionProof.png"));
+        }
+
 }
