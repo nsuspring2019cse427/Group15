@@ -10,7 +10,7 @@ public class Main {
 		JFrame  frame = new JFrame();
 		frame.setResizable(false);
 		frame.add(panel);
-		frame.setSize(706, 488);
+		frame.setSize(700, 480);
 		frame.setLocation(300, 150);
 		frame.setTitle("Happy Bird");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -30,7 +30,7 @@ public class Main {
 			panel.collisionOrScore();
 			panel.scrollBG();
 			panel.scrollGround();
-			
+			panel.repaint();
 		}	
 	}
 }

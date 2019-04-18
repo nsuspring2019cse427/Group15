@@ -29,8 +29,8 @@ public class Component {
 
 		//Creates bound of bird and walls
 		Rectangle birdBound = new Rectangle( this.getX(), this.getY(),25,25);
-		Rectangle WallRect=new Rectangle(wall.getX(),wall.getY(),wall.getWidth(),wall.getHeight());
-		return WallRect.intersects(birdBound);
+		Rectangle wallRect = new Rectangle(wall.getX(),wall.getY(),wall.getWidth(),wall.getHeight());
+		return birdBound.intersects(wallRect);
 	}
 	
 	
