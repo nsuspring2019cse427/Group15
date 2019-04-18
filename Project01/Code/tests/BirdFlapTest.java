@@ -11,11 +11,10 @@ class BirdFlapTest {
     private BirdFlap birdFlapTest;
 
     GamePanel panel = new GamePanel();
-    Component bird = new Component(0, 0, 700, 490, "images//bird.png");
 
     @BeforeEach
     void setUp() {
-        birdFlapTest = new BirdFlap(panel, bird);
+        birdFlapTest = new BirdFlap(panel);
     }
 
     @AfterEach
@@ -26,6 +25,5 @@ class BirdFlapTest {
     @Ignore("Not feasible for this method")
     @Test
     void run() {
-
     }
 }

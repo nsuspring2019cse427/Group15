@@ -33,13 +33,7 @@ class ComponentTest {
     @Test
     void detectCollisionTest() {
 
-        /**
-         * Test case with valid file path to check if the getImagePath returns right path
-         * should pass with no exception
-         *
-         */
-        ComponentTestObject.setImagePath("images//wallUp.png");
-        assertEquals("images//wallUp.png", ComponentTestObject.getImagePath());
+
     }
 
 

@@ -84,6 +84,12 @@ public class GamePanel  extends JPanel implements KeyListener {
 			background2.setX(background2.getX() -speed/2);
 		} else { background2.setX(700);	}
 	}
+
+
+    //Helps wall to shift from left to right
+    public void flap(){
+        bird.setY(bird.getY() - 6);
+    }
 	
 	
 	//Helps Ground to shift from left to right 
@@ -180,7 +186,8 @@ public class GamePanel  extends JPanel implements KeyListener {
 			}
 				
 			//Flaps if key pressed
-			BirdFlap flap = new BirdFlap(this,bird);
+
+			BirdFlap flap = new BirdFlap(this);
 			flap.start();
 			flapSound.playAudioFeedback();
 		}

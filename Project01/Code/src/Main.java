@@ -4,8 +4,9 @@ import javax.swing.JFrame;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		GamePanel panel  = new GamePanel();
+
+
+        GamePanel panel  = new GamePanel();
 		
 		JFrame  frame = new JFrame();
 		frame.setResizable(false);
