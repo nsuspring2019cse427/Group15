@@ -25,12 +25,11 @@ public class Component {
 		return (g.drawImage(birdImage.getImage(),x,y,null));
 	}
 
-	public boolean detectCollision(Component wall){
-
+	public boolean detectCollision(Component component){
 		//Creates bound of bird and walls
-		Rectangle birdBound = new Rectangle( this.getX(), this.getY(),25,25);
-		Rectangle wallRect = new Rectangle(wall.getX(),wall.getY(),wall.getWidth(),wall.getHeight());
-		return birdBound.intersects(wallRect);
+		Rectangle boundOne = new Rectangle( this.getX(), this.getY(),this.getWidth(),this.getHeight());
+		Rectangle BoundTwo = new Rectangle(component.getX(),component.getY(),component.getWidth(),component.getHeight());
+		return boundOne.intersects(BoundTwo);
 	}
 	
 	

@@ -23,7 +23,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 	private Component background2 = new Component(700, 0, 700, 490, "images//background.png");
 
 	//Bird
-	private Component bird = new Component((WIDTH/ 2 - 150), (HEIGHT /2) - 40, 50 , 36, "images//bird.png");
+	private Component bird = new Component((WIDTH/ 2 - 150), (HEIGHT /2) - 40, 25 , 25, "images//bird.png");
 
 	//Wall array
 	public Component[] walls = new Component[8];
@@ -47,7 +47,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 	
 	//Create the wall and
 	public boolean Start(){
-		if(createWalls(8) == walls){
+		if(createWalls() == walls){
 			return true;
 		}
 		else return false;
@@ -55,26 +55,12 @@ public class GamePanel  extends JPanel implements KeyListener {
 
 	//Gives bird Some Gravity
 	public void gravityPull(){
-		
-		bird.setY(bird.getY() + 3);						//Starts falling by One Pixel
-		
-		try{ Thread.sleep(3); } catch (Exception e) {}
-
-		// checks if it touches the ground or Sky
-		if(bird.getY() > 450 || bird.getY() <= 0){ 
-			// Plays hit Sound and if bird touches anything then makes gameOver true.
-			if(!gameOver) dieSound.playAudioFeedback();
-			gameOver = true;
-			bird.setX(-500);
-		}
-		
-		//super.repaint();
+		//Starts falling by One Pixel
+		bird.setY(bird.getY() + 2);
 	}
 	
-	
 	//Helps wall to shift from left to right 
-	public void scrollWalls(){ 
-		
+	public void scrollWalls(){
 		for(int i = 0; i < walls.length; i+=2) {
 			if (walls[i].getX() > -150) {
 				walls[i].setX(walls[i].getX() - speed);
@@ -84,16 +70,10 @@ public class GamePanel  extends JPanel implements KeyListener {
 				walls[i + 1].setX(700);
 			}
 		}
-		
-		try{ Thread.sleep(5); }  catch(Exception e) {}
-		//super.repaint();
 	}
 	
-	
-	
 	//Helps wall to shift from left to right 
-	public void scrollBG(){ 
-			
+	public void scrollBG(){
 		//Moves First BG Image
 		if(background1.getX() > -700){
 			background1.setX(background1.getX() - speed/2);
@@ -103,11 +83,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 		if(background2.getX() > -700){
 			background2.setX(background2.getX() -speed/2);
 		} else { background2.setX(700);	}
-		
-		try{ Thread.sleep(5); }  catch(Exception e) {}
-		//super.repaint();
 	}
-	
 	
 	
 	//Helps Ground to shift from left to right 
@@ -122,13 +98,9 @@ public class GamePanel  extends JPanel implements KeyListener {
 		if(ground2.getX() > -700){	
 			ground2.setX(ground2.getX() -speed);
 		} else {  ground2.setX(700); }
-		
-		//interval
-		try{ Thread.sleep(5); }  catch(Exception e) {}
-		//super.repaint();
 	}
-	
-	
+
+
 	//Draws All Components on panel
 	public void paint(Graphics g){
 		
@@ -162,26 +134,26 @@ public class GamePanel  extends JPanel implements KeyListener {
 			g.setFont(new Font("Arial", 1, 20));
 			g.drawString(String.valueOf("Score:"+points), 10 , 25);
 		}
-		
+
 		//Draws Grounds
 		ground1.draw(g);
 		ground2.draw(g);
 		
 	}
-	
-	
+
 	//Checks Collisions between wall and bird
 	public void collisionOrScore(){
 		//Creates bound of all walls
 		for(int i = 0; i < walls.length; i++) {
 
-			if (bird.detectCollision(walls[i])) {
+			if (bird.detectCollision(walls[i]) || bird.getY() > 450 || bird.getY() <= 0) {
 				bird.setX(-500);
 				if (!gameOver) dieSound.playAudioFeedback();
 				gameOver = true;
 				break;
+			}
 
-			} else if (bird.getX() == walls[i].getX()) {
+			else if (bird.getX() == walls[i].getX()) {
 				//if bird passes one wall then counts a point
 				this.points = incrementScore(this.points, 0.5);
 				pointSound.playAudioFeedback();
@@ -222,21 +194,19 @@ public class GamePanel  extends JPanel implements KeyListener {
 		return points;
 	}
 	
-	public Component[] createWalls(int numberOfPipes){
+	public Component[] createWalls(){
 
 		int initialPipeDistance = 600;
 
 		//walls width and height, width is static and height changes constantly
 		int width = 60, height = 280;
 
-		for(int i = 0; i < numberOfPipes; i++){
+		for(int i = 0; i < walls.length; i++){
 
 			int y = ThreadLocalRandom.current().nextInt(180, 360);
 			walls[i] = new Component(initialPipeDistance, y, width, height, "images//wallUp.png");
-
 			i++;
 			walls[i] = new Component(initialPipeDistance, y-370, width, height, "images//wallDown.png");
-
 			initialPipeDistance = initialPipeDistance + 220;
 
 		}

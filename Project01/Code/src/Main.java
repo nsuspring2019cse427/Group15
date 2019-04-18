@@ -22,7 +22,6 @@ public class Main {
 			try { Thread.sleep(10); } catch (Exception e) { }
 		}
 		
-		
 		//Starts the game
 		while(panel.isStarted()){
 			panel.gravityPull();
@@ -30,7 +29,8 @@ public class Main {
 			panel.collisionOrScore();
 			panel.scrollBG();
 			panel.scrollGround();
+			try { Thread.sleep(12); } catch (Exception e) { }
 			panel.repaint();
-		}	
+		}
 	}
 }

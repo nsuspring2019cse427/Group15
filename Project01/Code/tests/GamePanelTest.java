@@ -102,7 +102,7 @@ class GamePanelTest extends JPanel {
      */
     @Test
     void createWalls() {
-        assertEquals(gamePanelTestObject.walls, gamePanelTestObject.createWalls(8));
+        assertEquals(gamePanelTestObject.walls, gamePanelTestObject.createWalls());
     }
     
     /**
