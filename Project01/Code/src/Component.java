@@ -17,7 +17,6 @@ public class Component {
 		this.setWidth(width);
 		this.setImagePath(imagePath);
 	}
-
 	
 	//Draw Method
 	public boolean draw(Graphics g){
@@ -31,8 +30,7 @@ public class Component {
 		Rectangle BoundTwo = new Rectangle(component.getX(),component.getY(),component.getWidth(),component.getHeight());
 		return boundOne.intersects(BoundTwo);
 	}
-	
-	
+
 	//Setters of Component
 	public void setX(int x) {
 		this.x = x;
@@ -60,9 +58,6 @@ public class Component {
 			this.imagePath = imagePath;
 		} else throw new RuntimeException("Invalid file");
 	}
-
-
-
 
 	//Getters of Component
 	public int getX() { return x; }

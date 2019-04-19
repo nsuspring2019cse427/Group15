@@ -29,14 +29,29 @@ class ComponentTest {
         ComponentTestObject = null;
     }
 
+    /**
+     * Test case using Graph Partitioning for detect collision
+     * Two test cases needed to cover all the node.(One condition in the function)
+     *
+     * Test case 01: When detects collision
+     *
+     */
 
     @Test
-    void detectCollisionTest() {
-
-
+    void detectCollisionWhenCollideTest() {
+        Component newTestSubject = new Component(0, 0, 700, 490, "images//background.png");
+        assertTrue(ComponentTestObject.detectCollision(newTestSubject));
     }
 
-
+    /**
+     * Test case 02: When The object dont collide
+     *
+     */
+    @Test
+    void detectCollisionWhenNotCollideTest() {
+        Component newTestSubject = new Component(701, 491, 700, 490, "images//background.png");
+        assertFalse(ComponentTestObject.detectCollision(newTestSubject));
+    }
 
     /**
      * Test case using input space partition for X position.
