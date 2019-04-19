@@ -16,7 +16,7 @@ public class Main {
 		frame.setTitle("Happy Bird");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
-		panel.Start();
+		panel.initializeGameComponents();
 		
 		//waits until Up key pressed
 		while (panel.isStarted() == false){			

@@ -37,13 +37,14 @@ class GamePanelTest extends JPanel {
     }
     
     /**
-     * Test to check game can start by calling Start method.
-     * if it has started the return value will be always true
+     * Integration Test Create wall with Component Module
+     * Testing the walls array is populated properly or not
      *
      */
     @Test
-    void start() {
-        assertTrue(gamePanelTestObject.Start());
+    void initializeGameComponentsTest() {
+        gamePanelTestObject.initializeGameComponents();
+        assertNotNull(gamePanelTestObject.walls);
     }
 
     @Disabled("gravityPull method NOT feasible for testing")
@@ -102,7 +103,7 @@ class GamePanelTest extends JPanel {
      */
     @Test
     void createWalls() {
-        assertEquals(gamePanelTestObject.walls, gamePanelTestObject.createWalls());
+        gamePanelTestObject.createWalls();
     }
     
     /**

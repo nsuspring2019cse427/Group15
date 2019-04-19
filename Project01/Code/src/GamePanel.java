@@ -11,32 +11,32 @@ public class GamePanel  extends JPanel implements KeyListener {
 	 * Game sounds initialization, fixes after testing the GameSound Class
 	 *
 	 */
-	private GameSound dieSound = new GameSound("sounds//die.wav");
-	private GameSound pointSound = new GameSound("sounds//point.wav");
-	private GameSound flapSound = new GameSound("sounds//flap.wav");
+	protected GameSound dieSound = new GameSound("sounds//die.wav");
+	protected GameSound pointSound = new GameSound("sounds//point.wav");
+	protected GameSound flapSound = new GameSound("sounds//flap.wav");
 
 	public int WIDTH = 700, HEIGHT = 490;
-	private double points = 0;
+	protected double points = 0;
 	
 	//background
-	private Component background1 = new Component(0, 0, 700, 490, "images//background.png");
-	private Component background2 = new Component(700, 0, 700, 490, "images//background.png");
+	protected Component background1 = new Component(0, 0, 700, 490, "images//background.png");
+	protected Component background2 = new Component(700, 0, 700, 490, "images//background.png");
 
 	//Bird
-	private Component bird = new Component((WIDTH/ 2 - 150), (HEIGHT /2) - 40, 25 , 25, "images//bird.png");
+	protected Component bird = new Component((WIDTH/ 2 - 150), (HEIGHT /2) - 40, 25 , 25, "images//bird.png");
 
 	//Wall array
-	public Component[] walls = new Component[8];
+	protected Component[] walls = new Component[8];
 
 	//Ground
-	private Component ground1 = new Component(0, 445, 710, 490, "images//ground.png");
-	private Component ground2 = new Component(705, 445, 710, 490, "images//ground.png");
+	protected Component ground1 = new Component(0, 445, 710, 490, "images//ground.png");
+	protected Component ground2 = new Component(705, 445, 710, 490, "images//ground.png");
 
 	//Wall speed
-	private int speed = 2;
+	protected int speed = 2;
 
 	//Game Controller
-	private boolean started = false, gameOver = false;
+	protected boolean started = false, gameOver = false;
 	
 	
 	//GamePanel Constructor
@@ -46,11 +46,8 @@ public class GamePanel  extends JPanel implements KeyListener {
 	}
 	
 	//Create the wall and
-	public boolean Start(){
-		if(createWalls() == walls){
-			return true;
-		}
-		else return false;
+	public void initializeGameComponents(){
+		createWalls();
 	}
 
 	//Gives bird Some Gravity
@@ -100,7 +97,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 			ground1.setX(ground1.getX() - speed);
 		} else {  ground1.setX(700); }
 		
-		//Moves First ground Image
+		//Moves Second ground Image
 		if(ground2.getX() > -700){	
 			ground2.setX(ground2.getX() -speed);
 		} else {  ground2.setX(700); }
@@ -201,7 +198,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 		return points;
 	}
 	
-	public Component[] createWalls(){
+	public void createWalls(){
 
 		int initialPipeDistance = 600;
 
@@ -217,7 +214,6 @@ public class GamePanel  extends JPanel implements KeyListener {
 			initialPipeDistance = initialPipeDistance + 220;
 
 		}
-		return walls;
 	}
 	
 	//Setters and Getters
