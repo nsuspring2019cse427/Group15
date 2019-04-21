@@ -14,11 +14,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 /**
- * This class is not fully testable
- * Probably in integration we will be able to test it,
- * Since this class integrates all the modules in it.
+ * This class is the controller class of game(After Refactoring)
+ * Mainly Integration and Functional Test Are Conducted
  *
- * Possible test cases are added though
+ *
  */
 
 
@@ -37,7 +36,7 @@ class GamePanelTest extends JPanel {
     }
     
     /**
-     * Integration Test Create wall with Component Module
+     * Integration/Functional Test for  Create wall with Component Module
      * Testing the walls array is populated properly or not
      *
      */
@@ -47,25 +46,60 @@ class GamePanelTest extends JPanel {
         assertNotNull(gamePanelTestObject.walls);
     }
 
-    @Disabled("gravityPull method NOT feasible for testing")
+    /**
+     * Integration/Functional Test for gravityPull with Component Module
+     * Testing if the Game bird is feeling the gravity pull on each state change
+     *
+     */
     @Test
     void gravityPullTest() {
-
+        gamePanelTestObject.bird.setY(10);
+        int expected = 12;
+        gamePanelTestObject.gravityPull();
+        assertEquals(expected, gamePanelTestObject.bird.getY());
     }
 
-    @Disabled("scrollWalls method NOT feasible for testing")
+
     @Test
     void scrollWalls() {
+
     }
 
-    @Disabled("scrollBG method NOT feasible for testing")
+    /**
+     * Test case for scrollBG using Graph Partitioning
+     * Test case 01: For node with X greater than -700
+     *
+     */
+
     @Test
-    void scrollBG() {
+    void scrollBGWithXGreaterThanNegativeSevenHundredTest(){
+        gamePanelTestObject.background1.setX(200);
+        gamePanelTestObject.scrollBG();
+        assertEquals(199,  gamePanelTestObject.background1.getX());
     }
 
-    @Disabled("scrollGround method NOT feasible for testing")
+    /**
+     * Test case for scrollBG using Graph Partitioning
+     * Test case 02: For node with X less than -700
+     *
+     */
+    @Test
+    void scrollBGWithXLessThanNegativeSevenHundredTest(){
+        gamePanelTestObject.background1.setX(-701);
+        gamePanelTestObject.scrollBG();
+        assertEquals(700,  gamePanelTestObject.background1.getX());
+    }
+
     @Test
     void scrollGround() {
+    }
+
+    @Test
+    void flapTest() {
+        gamePanelTestObject.bird.setY(10);
+        int expected = 4;
+        gamePanelTestObject.flap();
+        assertEquals(expected, gamePanelTestObject.bird.getY());
     }
 
     @Disabled("Paint method NOT feasible for testing")
@@ -104,6 +138,7 @@ class GamePanelTest extends JPanel {
     @Test
     void createWalls() {
         gamePanelTestObject.createWalls();
+        assertNotNull(gamePanelTestObject.walls[1]);
     }
     
     /**

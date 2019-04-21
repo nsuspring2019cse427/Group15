@@ -71,6 +71,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 	
 	//Helps wall to shift from left to right 
 	public void scrollBG(){
+
 		//Moves First BG Image
 		if(background1.getX() > -700){
 			background1.setX(background1.getX() - speed/2);
@@ -80,6 +81,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 		if(background2.getX() > -700){
 			background2.setX(background2.getX() -speed/2);
 		} else { background2.setX(700);	}
+
 	}
 
 
@@ -113,12 +115,11 @@ public class GamePanel  extends JPanel implements KeyListener {
 		
 		//Draws Bird
 		bird.draw(g);
-		
+
 		//Draws Walls
 		for(int i = 0; i < walls.length; i++){
 			walls[i].draw(g);
 		}
-	
 		////Draws Texts
 		if (gameOver) {	
 			g.setFont(new Font("Arial", 1, 40));
@@ -141,22 +142,18 @@ public class GamePanel  extends JPanel implements KeyListener {
 		//Draws Grounds
 		ground1.draw(g);
 		ground2.draw(g);
-		
 	}
 
 	//Checks Collisions between wall and bird
 	public void collisionOrScore(){
 		//Creates bound of all walls
 		for(int i = 0; i < walls.length; i++) {
-
 			if (bird.detectCollision(walls[i]) || bird.getY() > 450 || bird.getY() <= 0) {
 				bird.setX(-500);
 				if (!gameOver) dieSound.playAudioFeedback();
 				gameOver = true;
 				break;
-			}
-
-			else if (bird.getX() == walls[i].getX()) {
+			} else if (bird.getX() == walls[i].getX()) {
 				//if bird passes one wall then counts a point
 				this.points = incrementScore(this.points, 0.5);
 				pointSound.playAudioFeedback();
@@ -170,10 +167,11 @@ public class GamePanel  extends JPanel implements KeyListener {
 		
 		if(e.getKeyCode() == KeyEvent.VK_UP || e.getKeyCode() == KeyEvent.VK_SPACE){
 			//Starts the game
+
 			if(!started) {
 				started = true;
 			}
-			
+
 			//Restarts The Game if its Over
 			if(gameOver){
 				bird.setY((HEIGHT /2));
@@ -181,9 +179,8 @@ public class GamePanel  extends JPanel implements KeyListener {
 				points = 0;
 				gameOver = false;
 			}
-				
-			//Flaps if key pressed
 
+			//Flaps if key pressed
 			BirdFlap flap = new BirdFlap(this);
 			flap.start();
 			flapSound.playAudioFeedback();
@@ -201,18 +198,14 @@ public class GamePanel  extends JPanel implements KeyListener {
 	public void createWalls(){
 
 		int initialPipeDistance = 600;
-
 		//walls width and height, width is static and height changes constantly
 		int width = 60, height = 280;
-
 		for(int i = 0; i < walls.length; i++){
-
 			int y = ThreadLocalRandom.current().nextInt(180, 360);
 			walls[i] = new Component(initialPipeDistance, y, width, height, "images//wallUp.png");
 			i++;
 			walls[i] = new Component(initialPipeDistance, y-370, width, height, "images//wallDown.png");
 			initialPipeDistance = initialPipeDistance + 220;
-
 		}
 	}
 	
