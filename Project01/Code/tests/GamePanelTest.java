@@ -133,9 +133,9 @@ class GamePanelTest extends JPanel {
      */
     @Test
     void scrollBGTwoWithXGreaterThanNegativeSevenHundredTest(){
-        gamePanelTestObject.background2.setX(-701);
+        gamePanelTestObject.background2.setX(200);
         gamePanelTestObject.scrollBG();
-        assertEquals(700,  gamePanelTestObject.background2.getX());
+        assertEquals(199,  gamePanelTestObject.background2.getX());
     }
 
     /**
@@ -150,17 +150,80 @@ class GamePanelTest extends JPanel {
         assertEquals(700,  gamePanelTestObject.background2.getX());
     }
 
-    @Test
-    void scrollGroundTest() {
-    }
+
+
+    /**
+     * Test case for scrollGround using Graph Partitioning
+     * Covers:  Node, Edge Coverage
+     *
+     * Test case 01: For path 1
+     */
 
     @Test
-    void flapTest() {
+    void scrollGroundWithPathOneTest(){
+        gamePanelTestObject.ground1.setX(200);
+        gamePanelTestObject.scrollGround();
+        assertEquals(198,  gamePanelTestObject.ground1.getX());
+    }
+
+    /**
+     * Test case for scrollGround using Graph Partitioning
+     * Test case 02: For path 2
+     *
+     */
+    @Test
+    void scrollGroundWithPathTwoTest(){
+        gamePanelTestObject.ground1.setX(-701);
+        gamePanelTestObject.scrollGround();
+        assertEquals(700,  gamePanelTestObject.ground1.getX());
+    }
+
+    /**
+     * Test case for scrollGround using Graph Partitioning
+     * Test case 03: For path 3
+     *
+     */
+    @Test
+    void scrollGroundWithPathThreeTest(){
+        gamePanelTestObject.ground1.setX(200);
+        gamePanelTestObject.scrollGround();
+        assertEquals(198,  gamePanelTestObject.ground1.getX());
+    }
+
+    /**
+     * Test case for scrollGround using Graph Partitioning
+     * Test case 04: For path 4
+     *
+     */
+    @Test
+    void scrollGroundWithPathFourTest(){
+        gamePanelTestObject.ground1.setX(-701);
+        gamePanelTestObject.scrollGround();
+        assertEquals(700,  gamePanelTestObject.ground1.getX());
+    }
+
+
+
+    /**
+     * Test case for flap using ISP Partitioning
+     *
+     */
+    @Test
+    void flapWithPartitionOneTest() {
         gamePanelTestObject.bird.setY(10);
         int expected = 4;
         gamePanelTestObject.flap();
         assertEquals(expected, gamePanelTestObject.bird.getY());
     }
+
+    @Test
+    void flapWithPartitionTwoTest() {
+        gamePanelTestObject.bird.setY(-10);
+        int expected = -16;
+        gamePanelTestObject.flap();
+        assertEquals(expected, gamePanelTestObject.bird.getY());
+    }
+
 
     @Disabled("Paint method NOT feasible for testing")
     @Test
@@ -190,16 +253,44 @@ class GamePanelTest extends JPanel {
                 Arguments.of(-1220.0, -1220.0)
         );
     }
+
     /**
      * Test case for checking if 8 walls are created properly
      *
      */
     @Test
-    void createWalls() {
+    void createWallsTest() {
         gamePanelTestObject.createWalls();
         assertNotNull(gamePanelTestObject.walls[1]);
     }
+
+    /**
+     * Functional Test with Graph Partition
+     * Test case for Collision Or Score
+     * TestCase One: GameOver for Collision
+     */
+    @Test
+    void collisionOrScoreForCollisionTest() {
+        gamePanelTestObject.createWalls();
+
+        gamePanelTestObject.walls[1].setX(10);
+        gamePanelTestObject.walls[1].setY(10);
+        gamePanelTestObject.walls[1].setWidth(10);
+        gamePanelTestObject.walls[1].setHeight(10);
+
+        gamePanelTestObject.bird.setX(10);
+        gamePanelTestObject.bird.setY(10);
+        gamePanelTestObject.bird.setWidth(10);
+        gamePanelTestObject.bird.setHeight(10);
+
+        gamePanelTestObject.collisionOrScore();
+
+        assertTrue(gamePanelTestObject.gameOver);
+    }
+
     
+
+
     /**
      * Parameterized test for isStarted And setStarted Method
      *
