@@ -35,4 +35,28 @@ public class GameGUITest  {
         } catch (Exception e) {}
     }
 
+    @Test
+    void BirdOnScreenUITest() {
+        try {
+            scr.find("images/birdScr.png");
+            assertNotNull(scr.exists("images/birdScr.png"));
+        } catch (Exception e) {}
+    }
+    @Test
+
+    void PresenceOfPipeUpGUITest() {
+        try {
+            scr.find("images/pipeUpScr.png");
+            assertNotNull(scr.exists("images/pipeUpScr.png"));
+        } catch (Exception e) {}
+    }
+
+    @Test
+    void PresenceOfPipeDownGUITest() {
+        try {
+            scr.find("images/pipeDownScr.png");
+            assertNotNull(scr.exists("images/pipeDownScr.png"));
+        } catch (Exception e) {}
+    }
+
 }
