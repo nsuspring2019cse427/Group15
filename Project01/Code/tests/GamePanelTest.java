@@ -288,8 +288,30 @@ class GamePanelTest extends JPanel {
         assertTrue(gamePanelTestObject.gameOver);
     }
 
-    
 
+    /**
+     * Functional Test with Graph Partition
+     * Test case for Collision Or Score
+     * TestCase One: GameOver for Collision
+     */
+    @Test
+    void collisionOrScoreForScoreTest() {
+        gamePanelTestObject.createWalls();
+
+        gamePanelTestObject.walls[1].setX(12);
+        gamePanelTestObject.walls[1].setY(12);
+        gamePanelTestObject.walls[1].setWidth(100);
+        gamePanelTestObject.walls[1].setHeight(10);
+
+        gamePanelTestObject.bird.setX(25);
+        gamePanelTestObject.bird.setY(25);
+        gamePanelTestObject.bird.setWidth(1);
+        gamePanelTestObject.bird.setHeight(1);
+
+        gamePanelTestObject.collisionOrScore();
+
+        assertFalse(gamePanelTestObject.gameOver);
+    }
 
     /**
      * Parameterized test for isStarted And setStarted Method
