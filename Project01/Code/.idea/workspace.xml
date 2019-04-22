@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964abf8d-9a0b-4889-9b94-a1446bd8de29" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Code/GameGUITest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Code/GameGUITest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/GameGUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/GameGUITest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state relative-caret-position="45">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -63,8 +65,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/GameGUITest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            <state relative-caret-position="347">
+              <caret line="92" column="12" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,7 +201,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555954016391" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555957193116" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -322,18 +324,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GameGUITest - 2019.04.21 at 01h 00m 41s.xml">
-      <configuration name="GameGUITest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameGUITest - 2019.04.21 at 01h 01m 48s.xml">
-      <configuration name="GameGUITest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameGUITest - 2019.04.21 at 01h 02m 32s.xml">
-      <configuration name="GameGUITest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameGUITest - 2019.04.21 at 01h 03m 04s.xml">
-      <configuration name="GameGUITest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GameGUITest - 2019.04.21 at 01h 03m 13s.xml">
       <configuration name="GameGUITest" configurationId="JUnit" />
     </history-entry>
@@ -352,15 +342,27 @@
     <history-entry file="GameGUITest - 2019.04.22 at 23h 24m 37s.xml">
       <configuration name="GameGUITest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="GameGUITest - 2019.04.23 at 00h 15m 05s.xml">
+      <configuration name="GameGUITest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GameGUITest - 2019.04.23 at 00h 15m 22s.xml">
+      <configuration name="GameGUITest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GameGUITest - 2019.04.23 at 00h 18m 24s.xml">
+      <configuration name="GameGUITest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GameGUITest - 2019.04.23 at 00h 18m 49s.xml">
+      <configuration name="GameGUITest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53420000" />
+    <option name="totallyTimeSpent" value="53734000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3383405" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34334764" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -529,8 +531,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="45">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -576,8 +578,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/GameGUITest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        <state relative-caret-position="347">
+          <caret line="92" column="12" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
