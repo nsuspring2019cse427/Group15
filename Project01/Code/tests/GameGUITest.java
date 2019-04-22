@@ -90,7 +90,7 @@ public class GameGUITest  {
     void GroundAvailableGUITest() {
         try {
             Thread.sleep(500);
-            
+
             scr.find("images/groundScr.png");
             Thread.sleep(500);
             assertNotNull(scr.exists("images/groundScr.png"));

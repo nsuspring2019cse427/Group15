@@ -50,29 +50,65 @@ class GamePanelTest extends JPanel {
      * Integration/Functional Test for gravityPull with Component Module
      * Testing if the Game bird is feeling the gravity pull on each state change
      *
+     * Covers input space partition
+     *
      */
     @Test
-    void gravityPullTest() {
+    void gravityPullWithPositiveStateVariableTest() {
         gamePanelTestObject.bird.setY(10);
         int expected = 12;
         gamePanelTestObject.gravityPull();
         assertEquals(expected, gamePanelTestObject.bird.getY());
     }
 
-
     @Test
-    void scrollWalls() {
-
+    void gravityPullWithNegativeStateVariableTest() {
+        gamePanelTestObject.bird.setY(-10);
+        int expected = -8;
+        gamePanelTestObject.gravityPull();
+        assertEquals(expected, gamePanelTestObject.bird.getY());
     }
 
     /**
-     * Test case for scrollBG using Graph Partitioning
-     * Test case 01: For node with X greater than -700
+     * Test case for scrollWalls using Graph Partitioning
+     *
+     * Test case 01: path that coves node 1, 2, 3.....
+     *
+     *  Covers all Node and Edges
      *
      */
 
     @Test
-    void scrollBGWithXGreaterThanNegativeSevenHundredTest(){
+    void scrollWallsForPathOneTest() {
+        gamePanelTestObject.createWalls();
+        int expected = gamePanelTestObject.walls[1].getX() - gamePanelTestObject.speed;
+        gamePanelTestObject.scrollWalls();
+        assertEquals(expected, gamePanelTestObject.walls[1].getX());
+    }
+
+    /**
+     * Test case 02: path the cover 1 , 2 , 4.....
+     *
+     */
+    @Test
+    void scrollWallsForPathTwoTest() {
+        gamePanelTestObject.createWalls();
+        gamePanelTestObject.walls[1].setX(-152);
+        int expected = gamePanelTestObject.walls[1].getX() - gamePanelTestObject.speed;
+        gamePanelTestObject.scrollWalls();
+        assertEquals(expected, gamePanelTestObject.walls[1].getX());
+    }
+
+
+    /**
+     * Test case for scrollBG using Graph Partitioning
+     * Covers:  Node, Edge Coverage
+     *
+     * Test case 01: For path 1
+     */
+
+    @Test
+    void scrollBGOneWithXGreaterThanNegativeSevenHundredTest(){
         gamePanelTestObject.background1.setX(200);
         gamePanelTestObject.scrollBG();
         assertEquals(199,  gamePanelTestObject.background1.getX());
@@ -80,18 +116,42 @@ class GamePanelTest extends JPanel {
 
     /**
      * Test case for scrollBG using Graph Partitioning
-     * Test case 02: For node with X less than -700
+     * Test case 02: For path 2
      *
      */
     @Test
-    void scrollBGWithXLessThanNegativeSevenHundredTest(){
+    void scrollBGOneWithXLessThanNegativeSevenHundredTest(){
         gamePanelTestObject.background1.setX(-701);
         gamePanelTestObject.scrollBG();
         assertEquals(700,  gamePanelTestObject.background1.getX());
     }
 
+    /**
+     * Test case for scrollBG using Graph Partitioning
+     * Test case 03: For path 3
+     *
+     */
     @Test
-    void scrollGround() {
+    void scrollBGTwoWithXGreaterThanNegativeSevenHundredTest(){
+        gamePanelTestObject.background2.setX(-701);
+        gamePanelTestObject.scrollBG();
+        assertEquals(700,  gamePanelTestObject.background2.getX());
+    }
+
+    /**
+     * Test case for scrollBG using Graph Partitioning
+     * Test case 04: For path 4
+     *
+     */
+    @Test
+    void scrollBGTwoWithXLessThanNegativeSevenHundredTest(){
+        gamePanelTestObject.background2.setX(-701);
+        gamePanelTestObject.scrollBG();
+        assertEquals(700,  gamePanelTestObject.background2.getX());
+    }
+
+    @Test
+    void scrollGroundTest() {
     }
 
     @Test
@@ -130,7 +190,6 @@ class GamePanelTest extends JPanel {
                 Arguments.of(-1220.0, -1220.0)
         );
     }
-
     /**
      * Test case for checking if 8 walls are created properly
      *
