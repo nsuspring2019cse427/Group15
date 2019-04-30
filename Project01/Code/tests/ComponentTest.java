@@ -79,8 +79,7 @@ class ComponentTest {
         return Stream.of(
                 Arguments.of(200, 200),
                 Arguments.of(0, 0),
-                Arguments.of(-110, -110),
-                Arguments.of(-1220, -1220)
+                Arguments.of(-110, -110)
         );
     }
     
@@ -111,11 +110,9 @@ class ComponentTest {
         return Stream.of(
                 Arguments.of(200, 200),
                 Arguments.of(0, 0),
-                Arguments.of(-110, -110),
-                Arguments.of(-1220, -1220)
+                Arguments.of(-220, -220)
         );
     }
-
 
 
     /**
@@ -157,14 +154,12 @@ class ComponentTest {
     }
 
 
-
     /**
      * Test case using Graph partition for Component Height.
      * The value of Height is divided into three parts, 0, negative values and positive values
      * Only 0 and positive value is accepted, since Heights cannot be negative.
      *
      */
-
 
     /**
      * Test of positive input space partition for height
@@ -198,7 +193,6 @@ class ComponentTest {
 
     @Test
     void setHeightTestWithNegativeParameterAndException() {
-
         Exception exception = assertThrows(RuntimeException.class, () -> ComponentTestObject.setHeight(-100));
         assertEquals("Cannot set negative height", exception.getMessage());
     }

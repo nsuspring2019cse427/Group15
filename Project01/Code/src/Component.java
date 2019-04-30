@@ -7,7 +7,7 @@ public class Component {
 	
 	private int x;
 	private int y;
-	private int width, height; 
+	private int width, height;
 	private String imagePath;
 	
 	public Component(int x, int y, int width, int height, String imagePath){
@@ -44,11 +44,13 @@ public class Component {
 		if (width >= 0)
 			this.width = width;
 		else throw new RuntimeException("Cannot set negative width");
+		return;
 	}
 	public void setHeight(int height) {
 		if (height >= 0)
 			this.height = height;
 		else throw new RuntimeException("Cannot set negative height");
+		return;
 	}
 
 	public void setImagePath(String imagePath) {
@@ -57,6 +59,7 @@ public class Component {
 		if (file.exists() && file.isFile() && imagePath != null) {
 			this.imagePath = imagePath;
 		} else throw new RuntimeException("Invalid file");
+		return;
 	}
 
 	//Getters of Component

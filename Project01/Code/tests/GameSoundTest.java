@@ -62,18 +62,14 @@ public class GameSoundTest {
      * Partitioning the input domain into two parts null and Valid String
      *
      * Graph Partition:
-     * 01 Valid audio input file
-     * 02 Invalid audio input file line in GameSoundTestForException
+     * 01 Valid audio input file and Invalid audio input file line in GameSoundTestForException
      *
      **/
     @Parameterized.Parameters
     public static Collection SoundFiles() {
         return Arrays.asList(new Object[][] {
-                { "sounds//die.wav", true },
                 { "sounds//point.wav", true },
-                { "dsfsdfsdfsd", false },
-                { "sounds//flap.wav", true },
-                { "Invalid-file", false }
+                { "dsfsdfsdfsd", false }
         });
     }
 

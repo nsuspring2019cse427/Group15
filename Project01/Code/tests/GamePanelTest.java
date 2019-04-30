@@ -1,3 +1,4 @@
+import org.junit.Ignore;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
@@ -6,7 +7,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import javax.swing.*;
 import java.util.stream.Stream;
 
 import static org.junit.Assert.assertEquals;
@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 
 
-class GamePanelTest extends JPanel {
+class GamePanelTest {
 
     private GamePanel gamePanelTestObject;
 
@@ -62,6 +62,14 @@ class GamePanelTest extends JPanel {
     }
 
     @Test
+    void gravityPullWithZeroStateVariableTest() {
+        gamePanelTestObject.bird.setY(0);
+        int expected = 2;
+        gamePanelTestObject.gravityPull();
+        assertEquals(expected, gamePanelTestObject.bird.getY());
+    }
+
+    @Test
     void gravityPullWithNegativeStateVariableTest() {
         gamePanelTestObject.bird.setY(-10);
         int expected = -8;
@@ -72,7 +80,7 @@ class GamePanelTest extends JPanel {
     /**
      * Test case for scrollWalls using Graph Partitioning
      *
-     * Test case 01: path that coves node 1, 2, 3.....
+     * Test case 01: covers path (1, 2, 3, 4, 6, 7, 8)
      *
      *  Covers all Node and Edges
      *
@@ -81,20 +89,20 @@ class GamePanelTest extends JPanel {
     @Test
     void scrollWallsForPathOneTest() {
         gamePanelTestObject.createWalls();
-        int expected = gamePanelTestObject.walls[1].getX() - gamePanelTestObject.speed;
+        int expected = gamePanelTestObject.walls[1].getX() - 2;
         gamePanelTestObject.scrollWalls();
         assertEquals(expected, gamePanelTestObject.walls[1].getX());
     }
 
     /**
-     * Test case 02: path the cover 1 , 2 , 4.....
+     * Test case 02: covers path (1, 2, 3, 5, 6, 7, 8)
      *
      */
     @Test
     void scrollWallsForPathTwoTest() {
         gamePanelTestObject.createWalls();
         gamePanelTestObject.walls[1].setX(-152);
-        int expected = gamePanelTestObject.walls[1].getX() - gamePanelTestObject.speed;
+        int expected = gamePanelTestObject.walls[1].getX() - 2;
         gamePanelTestObject.scrollWalls();
         assertEquals(expected, gamePanelTestObject.walls[1].getX());
     }
@@ -102,7 +110,7 @@ class GamePanelTest extends JPanel {
 
     /**
      * Test case for scrollBG using Graph Partitioning
-     * Covers:  Node, Edge Coverage
+     * Covers:  Node Coverage, Edge Coverage
      *
      * Test case 01: For path 1
      */
@@ -149,7 +157,6 @@ class GamePanelTest extends JPanel {
         gamePanelTestObject.scrollBG();
         assertEquals(700,  gamePanelTestObject.background2.getX());
     }
-
 
 
     /**
@@ -203,9 +210,8 @@ class GamePanelTest extends JPanel {
     }
 
 
-
     /**
-     * Test case for flap using ISP Partitioning
+     * Test case for flap using Input Space Partitioning
      *
      */
     @Test
@@ -216,8 +222,17 @@ class GamePanelTest extends JPanel {
         assertEquals(expected, gamePanelTestObject.bird.getY());
     }
 
+
     @Test
     void flapWithPartitionTwoTest() {
+        gamePanelTestObject.bird.setY(0);
+        int expected = -6;
+        gamePanelTestObject.flap();
+        assertEquals(expected, gamePanelTestObject.bird.getY());
+    }
+
+    @Test
+    void flapWithPartitionThreeTest() {
         gamePanelTestObject.bird.setY(-10);
         int expected = -16;
         gamePanelTestObject.flap();
@@ -225,7 +240,7 @@ class GamePanelTest extends JPanel {
     }
 
 
-    @Disabled("Paint method NOT feasible for testing")
+    @Ignore("Paint method NOT feasible for testing/ Covered In UI Testing")
     @Test
     void paint() {
     }
@@ -235,9 +250,18 @@ class GamePanelTest extends JPanel {
      */
     @ParameterizedTest
     @MethodSource("providePartitionedValueForIncrementScoreTest")
-    void incrementScore(double input, double expected) {
-        assertEquals(expected, gamePanelTestObject.incrementScore(0, input), 1);
+    void incrementScorePositiveTest(double input, double expected) {
+        assertEquals(expected+1.0, gamePanelTestObject.incrementScore(1.0, input), 1);
 
+    }
+
+    /**
+     * Parameterized test for IncrementScore Method
+     */
+    @ParameterizedTest
+    @MethodSource("providePartitionedValueForIncrementScoreTest")
+    void incrementScoreZeroTest(double input, double expected) {
+        assertEquals(expected, gamePanelTestObject.incrementScore(0.0, input), 1);
     }
 
     /**
@@ -250,12 +274,13 @@ class GamePanelTest extends JPanel {
         return Stream.of(
                 Arguments.of(200.0, 200.0),
                 Arguments.of(0.0, 0.0),
-                Arguments.of(-1220.0, -1220.0)
+                Arguments.of(-220.0, -220.0)
         );
     }
 
     /**
      * Test case for checking if 8 walls are created properly
+     * Integration tests
      *
      */
     @Test
@@ -264,19 +289,55 @@ class GamePanelTest extends JPanel {
         assertNotNull(gamePanelTestObject.walls[1]);
     }
 
+
     /**
      * Functional Test with Graph Partition
      * Test case for Collision Or Score
-     * TestCase One: GameOver for Collision
+     * Test Case 01: for path one score
+     */
+    @Test
+    void collisionOrScoreForScoreTest() {
+        gamePanelTestObject.createWalls();
+
+        gamePanelTestObject.walls[2].setX(10);
+        gamePanelTestObject.walls[2].setY(25);
+        gamePanelTestObject.walls[2].setWidth(10);
+        gamePanelTestObject.walls[2].setHeight(10);
+
+        gamePanelTestObject.walls[4].setX(10);
+        gamePanelTestObject.walls[4].setY(30);
+        gamePanelTestObject.walls[4].setWidth(10);
+        gamePanelTestObject.walls[4].setHeight(10);
+
+        gamePanelTestObject.bird.setX(25);
+        gamePanelTestObject.bird.setY(35);
+        gamePanelTestObject.bird.setWidth(2);
+        gamePanelTestObject.bird.setHeight(2);
+
+        gamePanelTestObject.collisionOrScore();
+
+        assertFalse(gamePanelTestObject.gameOver);
+    }
+
+    /**
+     * Functional Test with Graph Partition
+     * Test case for Collision Or Score
+     * Test Case 02: Path 2 - GameOver with Collision
+     *
      */
     @Test
     void collisionOrScoreForCollisionTest() {
         gamePanelTestObject.createWalls();
 
-        gamePanelTestObject.walls[1].setX(10);
-        gamePanelTestObject.walls[1].setY(10);
-        gamePanelTestObject.walls[1].setWidth(10);
-        gamePanelTestObject.walls[1].setHeight(10);
+        gamePanelTestObject.walls[1].setX(11);
+        gamePanelTestObject.walls[1].setY(9);
+        gamePanelTestObject.walls[3].setWidth(10);
+        gamePanelTestObject.walls[4].setHeight(1);
+
+        gamePanelTestObject.walls[3].setX(10);
+        gamePanelTestObject.walls[3].setY(10);
+        gamePanelTestObject.walls[3].setWidth(10);
+        gamePanelTestObject.walls[4].setHeight(10);
 
         gamePanelTestObject.bird.setX(10);
         gamePanelTestObject.bird.setY(10);
@@ -288,33 +349,9 @@ class GamePanelTest extends JPanel {
         assertTrue(gamePanelTestObject.gameOver);
     }
 
-
-    /**
-     * Functional Test with Graph Partition
-     * Test case for Collision Or Score
-     * TestCase One: GameOver for Collision
-     */
-    @Test
-    void collisionOrScoreForScoreTest() {
-        gamePanelTestObject.createWalls();
-
-        gamePanelTestObject.walls[1].setX(12);
-        gamePanelTestObject.walls[1].setY(12);
-        gamePanelTestObject.walls[1].setWidth(100);
-        gamePanelTestObject.walls[1].setHeight(10);
-
-        gamePanelTestObject.bird.setX(25);
-        gamePanelTestObject.bird.setY(25);
-        gamePanelTestObject.bird.setWidth(1);
-        gamePanelTestObject.bird.setHeight(1);
-
-        gamePanelTestObject.collisionOrScore();
-
-        assertFalse(gamePanelTestObject.gameOver);
-    }
-
     /**
      * Parameterized test for isStarted And setStarted Method
+     * Using Input Space Partition
      *
      */
     @ParameterizedTest
@@ -336,26 +373,6 @@ class GamePanelTest extends JPanel {
         );
     }
 
-    /**
-     * Setting gameover to true and Testing the method
-     *
-     */
-    @Test
-    void isGameOverTestWithTrue() {
-
-        gamePanelTestObject.setGameOver(true);
-        assertTrue(gamePanelTestObject.isGameOver());
-    }
-
-    /**
-     * Setting gameover to False and Testing the method
-     *
-     */
-    @Test
-    void isGameOverTestWithFalse() {
-        gamePanelTestObject.setGameOver(false);
-        assertFalse(gamePanelTestObject.isGameOver());
-    }
 
     /**
      * Parameterized test for isGameOver
@@ -366,7 +383,6 @@ class GamePanelTest extends JPanel {
     void isGameOverTest(boolean input, boolean expected) {
         gamePanelTestObject.setGameOver(input);
         assertEquals(expected, gamePanelTestObject.isGameOver());
-
     }
 
     /**
@@ -389,31 +405,35 @@ class GamePanelTest extends JPanel {
      * So there's test for these two states
      *
      */
+
+    /**
+     * Sets gameover to true and Tests the method
+     *
+     */
     @Test
-    void setGameOverTest() {
-        /**
-         * Setting gameover to true and Testing the method
-         *
-         */
+    void setGameOverTrueTest() {
         gamePanelTestObject.setGameOver(true);
         assertTrue(gamePanelTestObject.isGameOver());
+    }
 
-        /**
-         * Setting gameover to False and Testing the method
-         *
-         */
+    /**
+     * Setting gameover to False and Testing the method
+     *
+     */
+    @Test
+    void setGameOverFalseTest(){
         gamePanelTestObject.setGameOver(false);
         assertFalse(gamePanelTestObject.isGameOver());
     }
 
 
 
-    @Disabled("keyReleased method NOT feasible for testing, it has no content")
+    @Ignore("keyReleased method NOT feasible for testing, it has no content")
     @Test
     void keyReleased() {
     }
 
-    @Disabled("keyTyped method NOT feasible for testing, it has no content")
+    @Ignore("keyTyped method NOT feasible for testing, it has no content")
     @Test
     void keyTyped() {
     }

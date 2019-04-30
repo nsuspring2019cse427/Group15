@@ -15,7 +15,7 @@ public class GamePanel  extends JPanel implements KeyListener {
 	protected GameSound pointSound = new GameSound("sounds//point.wav");
 	protected GameSound flapSound = new GameSound("sounds//flap.wav");
 
-	public int WIDTH = 700, HEIGHT = 490;
+	public final int WIDTH = 700, HEIGHT = 490;
 	protected double points = 0;
 	
 	//background
@@ -32,12 +32,8 @@ public class GamePanel  extends JPanel implements KeyListener {
 	protected Component ground1 = new Component(0, 445, 710, 490, "images//ground.png");
 	protected Component ground2 = new Component(705, 445, 710, 490, "images//ground.png");
 
-	//Wall speed
-	protected int speed = 2;
-
 	//Game Controller
 	protected boolean started = false, gameOver = false;
-	
 	
 	//GamePanel Constructor
 	public GamePanel(){
@@ -60,8 +56,8 @@ public class GamePanel  extends JPanel implements KeyListener {
 	public void scrollWalls(){
 		for(int i = 0; i < walls.length; i+=2) {
 			if (walls[i].getX() > -150) {
-				walls[i].setX(walls[i].getX() - speed);
-				walls[i + 1].setX(walls[i + 1].getX() - speed);
+				walls[i].setX(walls[i].getX() - 2);
+				walls[i + 1].setX(walls[i + 1].getX() - 2);
 			} else {
 				walls[i].setX(700);
 				walls[i + 1].setX(700);
@@ -74,16 +70,15 @@ public class GamePanel  extends JPanel implements KeyListener {
 
 		//Moves First BG Image
 		if(background1.getX() > -700){
-			background1.setX(background1.getX() - speed/2);
+			background1.setX(background1.getX() - 1);
 		} else { background1.setX(700);	}
 		
 		//Moves Second BG Image
 		if(background2.getX() > -700){
-			background2.setX(background2.getX() -speed/2);
+			background2.setX(background2.getX() -1);
 		} else { background2.setX(700);	}
 
 	}
-
 
     //Helps wall to shift from left to right
     public void flap(){
@@ -96,12 +91,12 @@ public class GamePanel  extends JPanel implements KeyListener {
 		
 		//Moves First ground Image
 		if(ground1.getX() > -700){
-			ground1.setX(ground1.getX() - speed);
+			ground1.setX(ground1.getX() - 2);
 		} else {  ground1.setX(700); }
 		
 		//Moves Second ground Image
 		if(ground2.getX() > -700){	
-			ground2.setX(ground2.getX() -speed);
+			ground2.setX(ground2.getX() -2);
 		} else {  ground2.setX(700); }
 	}
 
@@ -188,10 +183,10 @@ public class GamePanel  extends JPanel implements KeyListener {
 	
 	}
 	
-	
 	//Increments the score
 	public double incrementScore(double points, double amount){
-		points += amount;
+		if(points >= 0)
+			points += amount;
 		return points;
 	}
 	
